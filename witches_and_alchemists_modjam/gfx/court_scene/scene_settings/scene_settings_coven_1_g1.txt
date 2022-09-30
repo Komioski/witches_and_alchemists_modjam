@@ -1,5 +1,4 @@
 name="Coven_1_g1"
-culture="coven"
 visual_culture_level=1
 cubemap="gfx/portraits/environments/events_forest_pine_01.dds"
 environment="gfx/court_scene/scene_environment/court_scene_environment.txt"
@@ -245,7 +244,7 @@ camera={ {
  }
 default_camera=0
 shadows_fade=1000.000000
-shadows_strength=-0.500000
+shadows_strength=-4.000000
 lights={ {
 		description="Chandelier 1"
 		light={
@@ -263,6 +262,7 @@ lights={ {
 			intensity_variation=5.000000
 			intensity_variation_frequency=200.000000
 			animation=yes
+			enabled=no
 			type="sphere_light"
 		}
 
@@ -290,6 +290,7 @@ lights={ {
 			intensity_variation=1.000000
 			intensity_variation_frequency=200.000000
 			animation=yes
+			enabled=no
 			type="disc_light"
 		}
 
@@ -313,6 +314,7 @@ lights={ {
 			pitch=15.000000
 			yaw=180.000000
 			color={ 1.000000 0.811157 0.644531 }
+			enabled=no
 			type="disc_light"
 		}
 
@@ -337,6 +339,7 @@ lights={ {
 			pitch=15.000000
 			yaw=180.000000
 			color={ 1.000000 0.811157 0.644531 }
+			enabled=no
 			type="disc_light"
 		}
 
@@ -360,7 +363,7 @@ lights={ {
 			position={ 0.000000 250.000000 247.599854 }
 			pitch=0.000000
 			yaw=0.000000
-			color={ 1.000000 0.367492 0.058594 }
+			color={ 0.188235 0.541176 0.513726 }
 			position_variation=2.000000
 			position_variation_frequency=200.000000
 			intensity_variation=5.000000
@@ -388,7 +391,7 @@ lights={ {
 			position={ 12.900000 250.000000 -301.000000 }
 			pitch=0.000000
 			yaw=0.000000
-			color={ 1.000000 0.446899 0.230469 }
+			color={ 0.086275 0.517647 0.450980 }
 			position_variation=2.000000
 			position_variation_frequency=200.000000
 			intensity_variation=5.000000
@@ -416,6 +419,7 @@ lights={ {
 			pitch=0.000000
 			yaw=0.000000
 			color={ 0.769531 0.902771 1.000000 }
+			enabled=no
 			type="point_light"
 		}
 
@@ -439,6 +443,7 @@ lights={ {
 			pitch=0.000000
 			yaw=90.000000
 			color={ 1.000000 0.807843 0.643137 }
+			enabled=no
 			type="spot_light"
 		}
 
@@ -462,6 +467,7 @@ lights={ {
 			pitch=0.000000
 			yaw=-90.000000
 			color={ 1.000000 0.807843 0.643137 }
+			enabled=no
 			type="spot_light"
 		}
 
@@ -485,6 +491,7 @@ lights={ {
 			pitch=99.000000
 			yaw=0.000000
 			color={ 1.000000 0.776764 0.628906 }
+			enabled=no
 			type="spot_light"
 		}
 
@@ -508,8 +515,7 @@ lights={ {
 			position={ 0.000000 195.100006 -96.800003 }
 			pitch=0.000000
 			yaw=0.000000
-			color={ 1.000000 0.469849 0.210938 }
-			enabled=no
+			color={ 0.113725 0.137255 0.176471 }
 			type="point_light"
 		}
 
@@ -532,7 +538,7 @@ lights={ {
 			position={ -606.000000 110.400002 -396.099823 }
 			pitch=0.000000
 			yaw=0.000000
-			color={ 1.000000 0.307098 0.066406 }
+			color={ 0.090196 0.141176 0.160784 }
 			position_variation=0.250000
 			position_variation_frequency=200.000000
 			intensity_variation=5.000000
@@ -562,6 +568,7 @@ lights={ {
 			pitch=0.000000
 			yaw=-90.000000
 			color={ 1.000000 0.807843 0.643137 }
+			enabled=no
 			type="spot_light"
 		}
 
@@ -585,6 +592,7 @@ lights={ {
 			pitch=0.000000
 			yaw=-90.000000
 			color={ 1.000000 0.807843 0.643137 }
+			enabled=no
 			type="spot_light"
 		}
 
@@ -608,6 +616,7 @@ lights={ {
 			pitch=15.000000
 			yaw=180.000000
 			color={ 1.000000 0.811157 0.644531 }
+			enabled=no
 			type="disc_light"
 		}
 
@@ -870,26 +879,33 @@ characters={ {
 		roles={ inspired_person antiquarian low_prio_lone_courtier }
 	}
  }
-assets={
- {
-		position={ 0.000000 0.000000 0.000000 }
+assets={ {
 		description="Forest Ground"
 		asset="court_forest_glade_entity"
 	}
  {
-		position={ 0.000000 0.000000 0.000000 }
 		description="Forest Foliage - Oak"
 		asset="court_forest_glade_alpha_01_entity"
 	}
  {
-		position={ 0.000000 0.000000 0.000000 }
 		description="Forest Foliage - Pine"
 		asset="court_forest_glade_alpha_02_entity"
 	}
  {
-		position={ 0.000000 0.000000 0.000000 }
-		description="Forest Foliage - Ferns"
+		description="Forest Foliage - Fern"
 		asset="court_forest_glade_alpha_03_entity"
+	}
+ {
+		description="Forest Foliage - Nettle"
+		asset="court_forest_glade_alpha_04_entity"
+	}
+ {
+		description="Forest Foliage - Grass"
+		asset="court_forest_glade_alpha_05_entity"
+	}
+ {
+		description="Skydome"
+		asset="court_forest_glade_skydome_entity"
 	}
  {
 		position={ 0.000059 0.000000 680.000000 }
@@ -912,6 +928,7 @@ assets={
 	}
  {
 		position={ 405.000000 60.000000 716.299988 }
+		scale=0.000000
 		description="God Ray Right"
 		asset="roco_god_ray_01"
 	}
