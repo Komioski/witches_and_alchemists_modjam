@@ -1613,8 +1613,8 @@ accessory_genes = {
 				1 = male_headgear_fantasy_wam_enchanter_hat_01
 			}
 			female = {
+				2 = female_headgear_fantasy_wam_witch_hat_01
 				1 = female_headgear_fantasy_wam_enchanter_hat_01
-				1 = female_headgear_fantasy_wam_witch_hat_01
 			}
 			boy = male
 			girl = female
@@ -1626,6 +1626,7 @@ accessory_genes = {
 				1 = male_headgear_fantasy_wam_wizzard_hat_01
 			}
 			female = {
+				2 = female_headgear_fantasy_wam_druidess_01
 				1 = female_headgear_fantasy_wam_witch_headscarf_01
 			}
 			boy = male

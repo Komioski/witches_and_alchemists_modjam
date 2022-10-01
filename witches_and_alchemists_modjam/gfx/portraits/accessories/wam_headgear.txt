@@ -22,3 +22,8 @@ female_headgear_fantasy_wam_witch_headscarf_01 = {
 	entity = { required_tags = "bald"		shared_pose_entity = head		entity = female_headgear_fantasy_wam_witch_headscarf_01_bald_entity	 }
 	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_fantasy_wam_witch_headscarf_01_entity 	 }		
 }
+
+female_headgear_fantasy_wam_druidess_01 = {	
+	set_tags = "crown"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_fantasy_wam_druidess_01_entity 	 }		
+}

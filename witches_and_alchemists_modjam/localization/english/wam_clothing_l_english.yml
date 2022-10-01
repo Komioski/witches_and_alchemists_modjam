@@ -15,6 +15,7 @@
  PORTRAIT_MODIFIER_custom_headgear_male_headgear_fantasy_wam_wizzard_hat_01:0 "@wam_icon! Alchemist Pointy Hat"
  PORTRAIT_MODIFIER_custom_headgear_female_headgear_fantasy_wam_witch_hat_01:0 "@wam_icon! Witch Pointy Hat"
  PORTRAIT_MODIFIER_custom_headgear_female_headgear_fantasy_wam_witch_headscarf_01:0 "@wam_icon! Druidess Headscarf"
+ PORTRAIT_MODIFIER_custom_headgear_female_headgear_fantasy_wam_druidess_01:0 "@wam_icon! Druidess Circlet"
  
  PORTRAIT_MODIFIER_custom_headgear_male_headgear_fantasy_wam_enchanter_hat_01:0 "@wam_icon! Horned Hat"
  PORTRAIT_MODIFIER_custom_headgear_female_headgear_fantasy_wam_enchanter_hat_01:0 "$PORTRAIT_MODIFIER_custom_headgear_male_headgear_fantasy_wam_enchanter_hat_01$"
