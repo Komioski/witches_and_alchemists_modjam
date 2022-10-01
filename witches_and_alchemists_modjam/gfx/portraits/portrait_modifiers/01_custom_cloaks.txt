@@ -9,6 +9,11 @@
 
 	add_accessory_modifiers = {
 		gene = cloaks
+		template = wam_placeholder_category_cloaks
+	}
+
+	add_accessory_modifiers = {
+		gene = cloaks
 		is_valid_custom = {
 			highest_held_title_tier >= tier_kingdom
 		}
