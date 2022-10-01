@@ -1,0 +1,14 @@
+﻿l_english:
+
+ PORTRAIT_MODIFIER_custom_cloaks_male_cloak_fantasy_wam_wizzard_cloak_01:0 "@wam_icon! Wizzard Cloak"
+ 
+ PORTRAIT_MODIFIER_custom_clothes_male_clothes_fantasy_wam_wizzard_robe_01:0 "@wam_icon! Wizzard Robe"
+ 
+ PORTRAIT_MODIFIER_custom_headgear_male_headgear_fantasy_wam_wizzard_hat_01:0 "@wam_icon! Wizzard Hat"
+ 
+ PORTRAIT_MODIFIER_custom_headgear_male_headgear_fantasy_wam_enchanter_hat_01:0 "@wam_icon! Enchanter Hat"
+ 
+ wam_poses_list_name:0 "Witches and Alchemists"
+ wam_potion_name:0 "Potion"
+ wam_grenade_name:0 "Holy Handgrenade"
+ wam_cauldron_name:0 "Cauldron"
