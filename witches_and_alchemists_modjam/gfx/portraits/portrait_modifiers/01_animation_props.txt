@@ -1,6 +1,18 @@
-animations_props = {
+﻿animations_props = {
 	usage = none
-
+	
+	## WITCHES AND ALCHEMISTS ##
+	
+	wam_holy_handgrenade_prop = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = props
+				template = wam_holy_handgrenade
+				value = 1.0
+			}
+		}
+	}
 	
 	wam_potion_prop = {
 		dna_modifiers = {

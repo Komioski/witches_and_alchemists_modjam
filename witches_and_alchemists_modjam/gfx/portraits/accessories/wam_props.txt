@@ -1,3 +1,6 @@
+wam_holy_handgrenade_01 = {
+	entity = {	required_tags = ""        node = "bn_l_prop"		entity = "portrait_prop_wam_holy_handgrenade_01_entity" }
+}
 
 
 wam_cauldron_01 = {

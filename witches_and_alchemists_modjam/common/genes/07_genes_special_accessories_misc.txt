@@ -1,4 +1,4 @@
-
+﻿
 
 special_genes = {
 
@@ -767,6 +767,17 @@ special_genes = {
 				girl = female
 			}
 
+			wam_holy_handgrenade = {
+				index = 62
+				male = {
+					1 = wam_holy_handgrenade_01
+				}
+				female = {
+					1 = wam_holy_handgrenade_01
+				}
+				boy = male
+				girl = female
+			}
 			
 			wam_potion = {
 				index = 63

@@ -1,4 +1,4 @@
-wam_cauldron = {
+﻿wam_cauldron = {
 	male = {
 		default = { head = "emotion_chessCertainWin1_entry" torso = "emotion_chessCertainWin1_entry" }
 		portrait_modifier = { animations_props = wam_cauldron_prop }
@@ -216,4 +216,208 @@ wam_potion = {
     female = male
     girl = male
 }
-
+
+wam_grenade = {
+    male = { 
+    	default = { head = "council_steward" torso = "council_steward" } 
+
+		wam_grenade_hunchbacked = {
+			animation = { head = "idle_entry" torso = "idle_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 110
+					portrait_has_trait_trigger = { TRAIT = hunchbacked }
+				}
+			}
+		}
+
+		council_chancellor_infant = {
+			animation = { head = "idle" torso = "idleInfant_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					scope:age <= 5
+				}
+			}
+		}
+
+		council_chancellor_child = {
+			animation = { head = "idle_entry" torso = "idle_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					always = no #scope:age <= 9
+
+				}
+			}
+		}
+
+		wam_grenade = {
+			animation = { head = "council_steward" torso = "council_steward" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					AND = {
+						#scope:age >= 10				
+						scope:current_weight < 60
+						NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+                        
+					}
+				}
+			}
+
+			portrait_modifier = {							
+				animations_props = wam_holy_handgrenade_prop
+				animations = council_steward_decal
+			}
+		}
+
+		wam_grenade_fat = {
+			animation = { head = "council_steward" torso = "council_steward" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					AND = {
+						#scope:age >= 10
+						scope:current_weight > 60
+						NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+                        
+					}					
+				}
+			}
+
+			portrait_modifier = {							
+				animations_props = wam_holy_handgrenade_prop
+				animations = council_steward_decal
+			}
+		}
+
+		wam_grenade_dwarf = {
+			animation = { head = "council_steward" torso = "council_stewardFatDwarf" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					AND = {
+						#scope:age >= 10
+						scope:current_weight < 65
+						portrait_has_trait_trigger = { TRAIT = dwarf }
+						NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }                        
+					}					
+				}
+			}
+
+			portrait_modifier = {							
+				animations_props = wam_holy_handgrenade_prop
+				animations = council_steward_decal
+			}
+		}
+
+		wam_grenade_fat_dwarf = {
+			animation = { head = "council_steward" torso = "council_stewardFatDwarf" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					AND = {
+						#scope:age >= 10
+						scope:current_weight > 65
+						portrait_has_trait_trigger = { TRAIT = dwarf }
+						NOT = { portrait_has_trait_trigger = { TRAIT = pregnant } }                        
+					}					
+				}
+			}
+
+			portrait_modifier = {							
+				animations_props = wam_holy_handgrenade_prop
+				animations = council_steward_decal
+			}
+		}
+
+		wam_grenade_pregnant = {
+			animation = { head = "misc_pregnant_entry" torso = "misc_pregnant_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					AND = {
+						scope:current_weight < 45
+						portrait_has_trait_trigger = { TRAIT = pregnant }
+						NOT = { portrait_has_trait_trigger = { TRAIT = dwarf } }
+					}					
+				}
+			}
+
+			portrait_modifier = {
+				animations = emotion_happy_decal
+			}
+		}
+
+		wam_grenade_pregnant_dwarf = {
+			animation = { head = "misc_pregnant_entry" torso = "misc_pregnantFat_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					AND = {
+						scope:current_weight < 60
+						portrait_has_trait_trigger = { TRAIT = pregnant }
+						portrait_has_trait_trigger = { TRAIT = dwarf }
+					}					
+				}
+			}
+
+			portrait_modifier = {
+				animations = emotion_happy_decal
+			}
+		}
+
+		wam_grenade_pregnant_fat_dwarf = {
+			animation = { head = "misc_pregnant_entry" torso = "misc_pregnantFatDwarf_entry" }
+
+			weight = {
+				base = 0
+
+				modifier = {
+					add = 100
+					AND = {
+						scope:current_weight > 60
+						portrait_has_trait_trigger = { TRAIT = pregnant }
+						portrait_has_trait_trigger = { TRAIT = dwarf }
+					}					
+				}
+			}
+
+			portrait_modifier = {
+				animations = emotion_happy_decal
+			}
+		}
+    }
+
+    boy = male
+    female = male
+    girl = male
+}
