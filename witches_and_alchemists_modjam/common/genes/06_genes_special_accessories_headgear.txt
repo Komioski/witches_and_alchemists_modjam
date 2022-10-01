@@ -1,4 +1,4 @@
-
+﻿
 special_genes = {
 
 accessory_genes = {
@@ -1610,6 +1610,7 @@ accessory_genes = {
 		wam_placeholder_category = {
 			index = 103
 			male = {
+				1 = male_headgear_fantasy_wam_enchanter_hat_01
 				1 = male_headgear_fantasy_wam_wizzard_hat_01
 			}
 			female = {
