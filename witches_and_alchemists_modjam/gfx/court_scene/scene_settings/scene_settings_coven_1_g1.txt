@@ -1,7 +1,8 @@
 name="Coven_1_g1"
+culture="coven"
 visual_culture_level=1
 cubemap="gfx/portraits/environments/events_forest_pine_01.dds"
-environment="gfx/court_scene/scene_environment/court_scene_environment.txt"
+environment="gfx/court_scene/scene_environment/court_scene_environment_coven.txt"
 audio_culture=1.000000
 camera={ {
 		description="Establishing Shot"
@@ -246,51 +247,21 @@ default_camera=0
 shadows_fade=1000.000000
 shadows_strength=-4.000000
 lights={ {
-		description="Chandelier 1"
-		light={
-			outer_cone_angle=1.000000
-			inner_cone_angle=0.000000
-			affected_by_shadow=no
-			radius=44.500000
-			intensity=532.000000
-			position={ 12.900000 523.600037 -349.300018 }
-			pitch=0.000000
-			yaw=0.000000
-			color={ 1.000000 0.580078 0.375000 }
-			position_variation=2.000000
-			position_variation_frequency=200.000000
-			intensity_variation=5.000000
-			intensity_variation_frequency=200.000000
-			animation=yes
-			enabled=no
-			type="sphere_light"
-		}
-
-		shadow_camera={
-			fov=150.000000
-			position={ 12.900000 523.600037 -349.300018 }
-			pitch=90.000000
-			yaw=-180.000000
-			camera_near_far={ 10.000000 1000.000000 }
-		}
-	}
- {
-		description="Chandelier 2"
+		description="Fill Light"
 		light={
 			outer_cone_angle=1.000000
 			inner_cone_angle=0.000000
 			radius=44.500000
-			intensity=85.000000
+			intensity=105.000000
 			position={ 12.900000 426.800018 412.700012 }
 			pitch=90.000000
 			yaw=0.000000
-			color={ 0.972656 0.714828 0.588913 }
+			color={ 0.554688 0.314178 0.270844 }
 			position_variation=1.000000
 			position_variation_frequency=39.000000
 			intensity_variation=1.000000
 			intensity_variation_frequency=200.000000
 			animation=yes
-			enabled=no
 			type="disc_light"
 		}
 
@@ -303,24 +274,27 @@ lights={ {
 		}
 	}
  {
-		description="Window Light 1"
+		description="Fire Light 1"
 		light={
 			outer_cone_angle=0.250000
 			inner_cone_angle=0.180000
 			cubemap_shadow=yes
-			radius=50.000000
-			intensity=25.000000
-			position={ -394.899994 210.500000 874.000000 }
-			pitch=15.000000
-			yaw=180.000000
-			color={ 1.000000 0.811157 0.644531 }
-			enabled=no
-			type="disc_light"
+			radius=685.100037
+			intensity=408.000000
+			position={ 0.000000 70.000000 20.000000 }
+			pitch=275.000000
+			yaw=91.000000
+			color={ 1.000000 0.514160 0.222656 }
+			position_variation_frequency=114.000000
+			intensity_variation=43.000000
+			intensity_variation_frequency=200.000000
+			animation=yes
+			type="point_light"
 		}
 
 		shadow_camera={
 			fov=119.000000
-			position={ -394.899994 210.500000 874.000000 }
+			position={ 0.000000 70.000000 20.000000 }
 			pitch=27.000000
 			yaw=180.000000
 			camera_near_far={ 140.000000 1000.000000 }
@@ -328,24 +302,28 @@ lights={ {
 		}
 	}
  {
-		description="Window Light 2"
+		description="Fire Light 2"
 		light={
-			outer_cone_angle=0.250000
-			inner_cone_angle=0.180000
+			outer_cone_angle=0.350000
+			inner_cone_angle=0.160000
 			cubemap_shadow=yes
-			radius=50.000000
-			intensity=25.000000
-			position={ 394.899994 210.500000 874.000000 }
-			pitch=15.000000
-			yaw=180.000000
-			color={ 1.000000 0.811157 0.644531 }
-			enabled=no
+			radius=100.400002
+			intensity=90.000000
+			position={ 0.000000 35.000000 20.000000 }
+			pitch=-87.000000
+			yaw=110.000000
+			color={ 1.000000 0.301758 0.140625 }
+			position_variation=8.000000
+			position_variation_frequency=22.000000
+			intensity_variation=10.000000
+			intensity_variation_frequency=27.000000
+			animation=yes
 			type="disc_light"
 		}
 
 		shadow_camera={
 			fov=120.000000
-			position={ 394.899994 210.500000 874.000000 }
+			position={ 0.000000 35.000000 20.000000 }
 			pitch=27.000000
 			yaw=-180.000000
 			camera_near_far={ 140.000000 1000.000000 }
@@ -353,13 +331,13 @@ lights={ {
 		}
 	}
  {
-		description="Fill light"
+		description="Moon Light 1"
 		light={
 			outer_cone_angle=1.000000
 			inner_cone_angle=0.000000
 			affected_by_shadow=no
 			radius=1113.000000
-			intensity=280.000000
+			intensity=502.000000
 			position={ 0.000000 250.000000 247.599854 }
 			pitch=0.000000
 			yaw=0.000000
@@ -381,13 +359,13 @@ lights={ {
 		}
 	}
  {
-		description="Fill light 2"
+		description="Moon Light 2"
 		light={
 			outer_cone_angle=1.000000
 			inner_cone_angle=0.000000
 			affected_by_shadow=no
 			radius=1005.799988
-			intensity=220.000000
+			intensity=151.000000
 			position={ 12.900000 250.000000 -301.000000 }
 			pitch=0.000000
 			yaw=0.000000
@@ -409,77 +387,6 @@ lights={ {
 		}
 	}
  {
-		light={
-			outer_cone_angle=1.000000
-			inner_cone_angle=0.000000
-			affected_by_shadow=no
-			radius=979.900024
-			intensity=450.000000
-			position={ -36.400002 384.500000 -1112.800049 }
-			pitch=0.000000
-			yaw=0.000000
-			color={ 0.769531 0.902771 1.000000 }
-			enabled=no
-			type="point_light"
-		}
-
-		shadow_camera={
-			fov=1.000000
-			position={ -36.400002 384.500000 -1112.800049 }
-			pitch=90.000000
-			yaw=0.000000
-			camera_near_far={ 0.100000 1000.000000 }
-		}
-	}
- {
-		description="Light L"
-		light={
-			outer_cone_angle=0.830000
-			inner_cone_angle=0.610000
-			affected_by_shadow=no
-			radius=300.000000
-			intensity=500.000000
-			position={ -710.000000 180.000000 419.700012 }
-			pitch=0.000000
-			yaw=90.000000
-			color={ 1.000000 0.807843 0.643137 }
-			enabled=no
-			type="spot_light"
-		}
-
-		shadow_camera={
-			fov=1.000000
-			position={ -710.000000 180.000000 419.700012 }
-			pitch=90.000000
-			yaw=0.000000
-			camera_near_far={ 0.100000 1000.000000 }
-		}
-	}
- {
-		description="Light R"
-		light={
-			outer_cone_angle=0.830000
-			inner_cone_angle=0.610000
-			affected_by_shadow=no
-			radius=300.000000
-			intensity=500.000000
-			position={ 710.000000 180.000000 4.200366 }
-			pitch=0.000000
-			yaw=-90.000000
-			color={ 1.000000 0.807843 0.643137 }
-			enabled=no
-			type="spot_light"
-		}
-
-		shadow_camera={
-			fov=1.000000
-			position={ 710.000000 180.000000 4.200366 }
-			pitch=90.000000
-			yaw=0.000000
-			camera_near_far={ 0.100000 1000.000000 }
-		}
-	}
- {
 		description="Spotlight Ruler"
 		light={
 			outer_cone_angle=0.390000
@@ -491,7 +398,6 @@ lights={ {
 			pitch=99.000000
 			yaw=0.000000
 			color={ 1.000000 0.776764 0.628906 }
-			enabled=no
 			type="spot_light"
 		}
 
@@ -511,17 +417,17 @@ lights={ {
 			inner_cone_angle=0.000000
 			affected_by_shadow=no
 			radius=2461.199951
-			intensity=234.000000
-			position={ 0.000000 195.100006 -96.800003 }
+			intensity=200.000000
+			position={ 108.900002 195.100006 -96.800003 }
 			pitch=0.000000
 			yaw=0.000000
-			color={ 0.113725 0.137255 0.176471 }
+			color={ 0.109804 0.137255 0.176471 }
 			type="point_light"
 		}
 
 		shadow_camera={
 			fov=1.000000
-			position={ 0.000000 195.100006 -96.800003 }
+			position={ 108.900002 195.100006 -96.800003 }
 			pitch=90.000000
 			yaw=0.000000
 			camera_near_far={ 0.100000 1000.000000 }
@@ -544,6 +450,7 @@ lights={ {
 			intensity_variation=5.000000
 			intensity_variation_frequency=200.000000
 			animation=yes
+			enabled=no
 			type="point_light"
 		}
 
@@ -557,72 +464,28 @@ lights={ {
 		}
 	}
  {
-		description="Light R"
-		light={
-			outer_cone_angle=0.830000
-			inner_cone_angle=0.610000
-			affected_by_shadow=no
-			radius=300.000000
-			intensity=500.000000
-			position={ 710.000000 180.000000 -407.000366 }
-			pitch=0.000000
-			yaw=-90.000000
-			color={ 1.000000 0.807843 0.643137 }
-			enabled=no
-			type="spot_light"
-		}
-
-		shadow_camera={
-			fov=1.000000
-			position={ 710.000000 180.000000 -407.000366 }
-			pitch=90.000000
-			yaw=0.000000
-			camera_near_far={ 0.100000 1000.000000 }
-		}
-	}
- {
-		description="Light R"
-		light={
-			outer_cone_angle=0.830000
-			inner_cone_angle=0.610000
-			affected_by_shadow=no
-			radius=300.000000
-			intensity=500.000000
-			position={ 710.000000 180.000000 393.890381 }
-			pitch=0.000000
-			yaw=-90.000000
-			color={ 1.000000 0.807843 0.643137 }
-			enabled=no
-			type="spot_light"
-		}
-
-		shadow_camera={
-			fov=1.000000
-			position={ 710.000000 180.000000 393.890381 }
-			pitch=90.000000
-			yaw=0.000000
-			camera_near_far={ 0.100000 1000.000000 }
-		}
-	}
- {
-		description="Window Light Top"
+		description="Fireflies"
 		light={
 			outer_cone_angle=0.430000
 			inner_cone_angle=0.000000
 			affected_by_shadow=no
-			radius=50.000000
-			intensity=50.000000
-			position={ 0.000000 570.500000 1055.000000 }
+			radius=20.000000
+			intensity=20.000000
+			position={ -60.000000 330.000000 -300.000000 }
 			pitch=15.000000
 			yaw=180.000000
-			color={ 1.000000 0.811157 0.644531 }
-			enabled=no
-			type="disc_light"
+			color={ 1.000000 0.328125 0.000000 }
+			position_variation=7.000000
+			position_variation_frequency=23.000000
+			intensity_variation=50.000000
+			intensity_variation_frequency=40.000000
+			animation=yes
+			type="sphere_light"
 		}
 
 		shadow_camera={
 			fov=120.000000
-			position={ 0.000000 570.500000 1055.000000 }
+			position={ -60.000000 330.000000 -300.000000 }
 			pitch=15.000000
 			yaw=180.000000
 			camera_near_far={ 10.000000 1000.000000 }
@@ -904,10 +767,6 @@ assets={ {
 		asset="court_forest_glade_alpha_05_entity"
 	}
  {
-		description="Skydome"
-		asset="court_forest_glade_skydome_entity"
-	}
- {
 		position={ 0.000059 0.000000 680.000000 }
 		direction=0.000010
 		description="Throne"
@@ -922,98 +781,41 @@ assets={ {
 		roles=spouse_throne
 	}
  {
-		position={ -570.000000 55.000000 -415.000000 }
+		position={ -25.000000 30.000000 20.000000 }
+		scale=0.800000
 		description="Fireplace Particles"
 		asset="roco_fireplace"
 	}
  {
-		position={ 405.000000 60.000000 716.299988 }
-		scale=0.000000
-		description="God Ray Right"
-		asset="roco_god_ray_01"
+		position={ -60.000000 330.000000 -300.000000 }
+		rotation={ -80.000000 0.000000 50.000000 }
+		scale=0.800000
+		description="Fireflies"
+		asset="roco_dust_motes_mena"
 	}
  {
-		position={ 455.000000 185.000000 660.000000 }
-		direction=-5.000016
-		description="God Ray Right Side"
-		asset="roco_god_ray_02"
-	}
- {
-		position={ -390.000000 60.000000 722.100037 }
-		description="God Ray Left"
-		asset="roco_god_ray_01"
-	}
- {
-		position={ -440.000000 200.000000 660.500000 }
-		direction=5.000000
-		description="God Ray Left Side"
-		asset="roco_god_ray_02"
-	}
- {
-		position={ -40.899982 370.501007 620.000000 }
-		direction=5.000000
-		scale=1.250000
-		description="God Ray Mid"
-		asset="roco_god_ray_01"
-	}
- {
-		position={ 42.000000 370.501007 630.000000 }
-		direction=-5.000000
-		scale=1.250000
-		description="God Ray Mid"
-		asset="roco_god_ray_01"
-	}
- {
-		position={ -110.499962 538.700012 660.500000 }
-		direction=15.000001
-		description="God Ray Mid Side Left"
-		asset="roco_god_ray_02"
-	}
- {
-		position={ 110.000000 538.700012 660.500000 }
-		direction=-15.000016
-		description="God Ray Mid Side Right"
-		asset="roco_god_ray_02"
-	}
- {
-		position={ -390.000000 150.000000 600.000000 }
-		description="Dust Motes Particles"
-		asset="roco_dust_motes"
-	}
- {
-		position={ 390.000000 150.000000 600.000000 }
-		description="Dust Motes Particles"
-		asset="roco_dust_motes"
-	}
- {
-		position={ -380.000000 10.000000 300.000000 }
-		description="Window Particle Cookie"
-		asset="roco_window_cookie"
-	}
- {
-		position={ 410.000000 10.000000 300.000000 }
-		description="Window Particle Cookie"
-		asset="roco_window_cookie"
+		position={ -10.000000 0.000000 0.000000 }
+		scale=4.999999
+		description="Fire Atmosphere"
+		asset="roco_atmospheric_fire_01"
 	}
  {
 		position={ -387.100006 230.000000 604.799988 }
 		rotation={ 180.000000 30.000006 180.000000 }
+		scale=1.500000
 		description="Atmospheric Scattering Left"
-		asset="roco_atmospheric_01"
+		asset="roco_atmospheric_night_01"
 	}
  {
 		position={ 350.700012 230.000000 604.799988 }
 		direction=30.000000
+		scale=1.500000
 		description="Atmospheric Scattering Right"
-		asset="roco_atmospheric_01"
+		asset="roco_atmospheric_night_01"
 	}
  {
-		position={ 0.000000 556.500000 689.500000 }
-		description="Atmospheric Scattering Top"
-		asset="roco_atmospheric_01"
-	}
- {
-		position={ -610.000000 24.000000 -400.000000 }
+		position={ -25.000000 5.000000 20.000000 }
+		scale=0.700000
 		description="Fireplace Logs"
 		asset="ep1_fireplace_logs_entity"
 	}
@@ -1035,6 +837,34 @@ assets={ {
 		asset="ep1_court_western_event_group_sounds"
 		roles=dynamic_sound_entity
 		tag=event_group_3	}
+ {
+		position={ 700.000000 350.000000 -500.000000 }
+		direction=30.000000
+		scale=1.500000
+		description="Atmospheric Scattering Right Far"
+		asset="roco_atmospheric_night_01"
+	}
+ {
+		position={ -700.000000 350.000000 -500.000000 }
+		rotation={ 180.000000 30.000006 180.000000 }
+		scale=1.500000
+		description="Atmospheric Scattering Left Far"
+		asset="roco_atmospheric_night_01"
+	}
+ {
+		position={ -1000.000000 500.000000 0.000000 }
+		rotation={ 180.000000 30.000000 180.000000 }
+		scale=4.000000
+		description="Atmospheric Scattering Left Sky"
+		asset="roco_atmospheric_night_01"
+	}
+ {
+		position={ 1000.000000 500.000000 0.000000 }
+		rotation={ 180.000000 30.000000 180.000000 }
+		scale=4.000000
+		description="Atmospheric Scattering Right Sky"
+		asset="roco_atmospheric_night_01"
+	}
  }
 artifacts={ {
 		locator="artifact_wall_large_1"

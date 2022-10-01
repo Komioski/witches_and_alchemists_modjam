@@ -1,0 +1,10 @@
+﻿
+coven = {
+	trigger = {
+#		exists = capital_county
+#		capital_county.culture = has_cultural_pillar = heritage_goidelic
+		# For Witches & Alchemists ModJam, set trigger to being in a coven.
+		exists = this
+		has_trait = witch
+	}
+}

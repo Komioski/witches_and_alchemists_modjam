@@ -12,7 +12,7 @@ pdxmesh = {
 	}
 	meshsettings = {
 		name = "court_rock_forest_01"
-		index = 1
+		index = 0
 		texture_diffuse = "court_rock_forest_01_diffuse.dds"
 		texture_normal = "court_rock_forest_01_normal.dds"
 		texture_specular = "court_rock_forest_01_properties.dds"
@@ -21,7 +21,7 @@ pdxmesh = {
 	}
 	meshsettings = {
 		name = "court_rock_forest_02"
-		index = 2
+		index = 0
 		texture_diffuse = "court_rock_forest_02_diffuse.dds"
 		texture_normal = "court_rock_forest_02_normal.dds"
 		texture_specular = "court_rock_forest_02_properties.dds"
@@ -29,8 +29,26 @@ pdxmesh = {
 		shader_file = "gfx/FX/court_scene.shader"
 	}
 	meshsettings = {
+		name = "court_rock_forest_03"
+		index = 0
+		texture_diffuse = "court_rock_forest_03_diffuse.dds"
+		texture_normal = "court_rock_forest_03_normal.dds"
+		texture_specular = "court_rock_forest_03_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+	meshsettings = {
+		name = "court_rock_forest_04"
+		index = 0
+		texture_diffuse = "court_rock_forest_04_diffuse.dds"
+		texture_normal = "court_rock_forest_04_normal.dds"
+		texture_specular = "court_rock_forest_04_properties.dds"
+		shader = "court"
+		shader_file = "gfx/FX/court_scene.shader"
+	}
+	meshsettings = {
 		name = "court_tree_oak_01"
-		index = 3
+		index = 0
 		texture_diffuse = "bark_oak_01_diffuse.dds"
 		texture_normal = "bark_oak_01_normal.dds"
 		texture_specular = "bark_oak_01_properties.dds"
@@ -39,40 +57,31 @@ pdxmesh = {
 	}
 	meshsettings = {
 		name = "court_tree_pine_01"
-		index = 4
+		index = 0
 		texture_diffuse = "bark_pine_01_diffuse.dds"
 		texture_normal = "bark_pine_01_normal.dds"
 		texture_specular = "bark_pine_01_properties.dds"
 		shader = "court"
 		shader_file = "gfx/FX/court_scene.shader"
 	}
-	meshsettings = {
-		name = "mushroom_01"
-		index = 5
-		texture_diffuse = "court_mushroom_01_diffuse.dds"
-		texture_normal = "court_mushroom_01_normal.dds"
-		texture_specular = "court_mushroom_01_properties.dds"
-		shader = "court"
-		shader_file = "gfx/FX/court_scene.shader"
-	}
-	meshsettings = {
-		name = "mushroom_02"
-		index = 6
-		texture_diffuse = "court_mushroom_02_diffuse.dds"
-		texture_normal = "court_mushroom_02_normal.dds"
-		texture_specular = "court_mushroom_02_properties.dds"
-		shader = "court"
-		shader_file = "gfx/FX/court_scene.shader"
-	}
-	meshsettings = {
-		name = "skydome"
-		index = 7
-		texture_diffuse = "sky_forest_glade_02_diffuse.dds"
-		texture_normal = "sky_forest_glade_01_normal.dds"
-		texture_specular = "sky_forest_glade_01_properties.dds"
-		shader = "court"
-		shader_file = "gfx/FX/court_scene.shader"
-	}
+#	meshsettings = {
+#		name = "mushroom_01"
+#		index = 0
+#		texture_diffuse = "court_mushroom_01_diffuse.dds"
+#		texture_normal = "court_mushroom_01_normal.dds"
+#		texture_specular = "court_mushroom_01_properties.dds"
+#		shader = "court"
+#		shader_file = "gfx/FX/court_scene.shader"
+#	}
+#	meshsettings = {
+#		name = "mushroom_02"
+#		index = 0
+#		texture_diffuse = "court_mushroom_02_diffuse.dds"
+#		texture_normal = "court_mushroom_02_normal.dds"
+#		texture_specular = "court_mushroom_02_properties.dds"
+#		shader = "court"
+#		shader_file = "gfx/FX/court_scene.shader"
+#	}
 }
 
 entity = {
