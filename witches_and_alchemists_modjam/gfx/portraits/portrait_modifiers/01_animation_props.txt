@@ -2,6 +2,17 @@ animations_props = {
 	usage = none
 
 	
+	wam_potion_prop = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = props
+				template = wam_potion
+				value = 1.0
+			}
+		}
+	}
+	
 	wam_cauldron_prop = {
 		dna_modifiers = {
 			accessory = {

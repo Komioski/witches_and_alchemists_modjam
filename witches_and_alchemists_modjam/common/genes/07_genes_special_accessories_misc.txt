@@ -768,6 +768,18 @@ special_genes = {
 			}
 
 			
+			wam_potion = {
+				index = 63
+				male = {
+					1 = wam_potion_01
+				}
+				female = {
+					1 = wam_potion_01
+				}
+				boy = male
+				girl = female
+			}
+			
 			wam_cauldron = {
 				index = 64
 				male = {
