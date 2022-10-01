@@ -1,1 +1,14 @@
-﻿
+wam_cauldron = {
+	male = {
+		default = { head = "emotion_chessCertainWin1_entry" torso = "emotion_chessCertainWin1_entry" }
+		portrait_modifier = { animations_props = wam_cauldron_prop }
+	}
+	boy = {
+		default = { head = "idle" torso = "idle" }
+		portrait_modifier = { animations_props = wam_cauldron_prop }
+	}
+	
+	female = male
+	girl = boy
+}
+

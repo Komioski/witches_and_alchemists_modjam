@@ -1,1 +1,5 @@
-﻿
+
+
+wam_cauldron_01 = {
+	entity = {	required_tags = ""        node = "bn_r_ftToe"		entity = "portrait_prop_wam_cauldron_01_entity" }
+}

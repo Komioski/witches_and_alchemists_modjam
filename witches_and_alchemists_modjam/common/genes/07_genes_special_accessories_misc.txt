@@ -1,4 +1,4 @@
-﻿
+
 
 special_genes = {
 
@@ -767,6 +767,18 @@ special_genes = {
 				girl = female
 			}
 
+			
+			wam_cauldron = {
+				index = 64
+				male = {
+					1 = wam_cauldron_01
+				}
+				female = {
+					1 = wam_cauldron_01
+				}
+				boy = male
+				girl = female
+			}
 		}
 		
 

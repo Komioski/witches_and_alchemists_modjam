@@ -1,5 +1,19 @@
-﻿animations_props = {
+animations_props = {
 	usage = none
+
+	
+	wam_cauldron_prop = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = props
+				template = wam_cauldron
+				value = 1.0
+			}
+		}
+	}
+	
+	##
 
 	chancellor_fp2_prop = {
 		dna_modifiers = {
