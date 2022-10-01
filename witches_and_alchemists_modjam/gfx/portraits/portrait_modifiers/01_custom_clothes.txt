@@ -2,6 +2,13 @@
 	usage = customization
 	interface_position = 0
 
+## WITCHES AND ALCHEMISTS ##
+
+	add_accessory_modifiers = {
+		gene = clothes
+		template = wam_placeholder_category_clothes
+	}
+	
 ## FP2 - The Fate of Iberia ##
 
 	add_accessory_modifiers = {

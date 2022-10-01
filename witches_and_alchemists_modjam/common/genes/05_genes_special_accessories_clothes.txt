@@ -1664,6 +1664,21 @@ special_genes = {
 				}
 				
 				
+			wam_placeholder_category_clothes = {
+				index = 81
+
+				male = {
+					1 = male_clothes_fantasy_wam_wizzard_robe_01
+				}
+
+				female = {
+					1 = empty
+				}
+				boy = male
+				girl = female
+
+				}
+				
 		}	
 	}
 }
