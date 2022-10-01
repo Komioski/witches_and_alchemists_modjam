@@ -17,8 +17,58 @@ jabir_ibn_hayyan.0001 = {
 		animation = personality_rational
 	}
 
-	option = { # Ok
+	option = { # Alchemy
 		name = jabir_ibn_hayyan.0001.a
+		custom_tooltip = jabir_ibn_hayyan.0001.a.tooltip
+		add_character_modifier = {
+			modifier = wam_studying_jabiran_corpus_alchemy
+			years = 10
+		}
+	}
+
+	option = { # Diplomacy
+		name = jabir_ibn_hayyan.0001.b
+		custom_tooltip = jabir_ibn_hayyan.0001.b.tooltip
+		add_character_modifier = {
+			modifier = wam_studying_jabiran_corpus_philosophy
+			years = 10
+		}
+	}
+
+	option = { # Martial
+		name = jabir_ibn_hayyan.0001.c
+		custom_tooltip = jabir_ibn_hayyan.0001.c.tooltip
+		add_character_modifier = {
+			modifier = wam_studying_jabiran_corpus_strategems
+			years = 10
+		}
+	}
+
+	option = { # Stewardship
+		name = jabir_ibn_hayyan.0001.d
+		custom_tooltip = jabir_ibn_hayyan.0001.d.tooltip
+		add_character_modifier = {
+			modifier = wam_studying_jabiran_corpus_astronomy
+			years = 10
+		}
+	}
+
+	option = { # Intrigue
+		name = jabir_ibn_hayyan.0001.e
+		custom_tooltip = jabir_ibn_hayyan.0001.e.tooltip
+		add_character_modifier = {
+			modifier = wam_studying_jabiran_corpus_magic
+			years = 10
+		}
+	}
+
+	option = { # Learning
+		name = jabir_ibn_hayyan.0001.f
+		custom_tooltip = jabir_ibn_hayyan.0001.f.tooltip
+		add_character_modifier = {
+			modifier = wam_studying_jabiran_corpus_religion
+			years = 10
+		}
 	}
 }
 
@@ -38,27 +88,63 @@ jabir_ibn_hayyan.0002 = {
 		animation = personality_content
 	}
 
-	trigger = {
-		learning >= decent_skill_rating
-	}
-
-	
 	immediate = {
-		create_character = {
-			location = root.capital_province
-			template = jabir_ibn_hayyan_character
+		character:wam_middle_east_01 = {
 			save_scope_as = jabir
 		}
-		hidden_effect = {
-			scope:jabir = {
-				add_character_modifier = {
-					modifier = wam_jabir_ibn_hayyan_modifier
-				}
-			}
+	}
+
+	option = { # Alchemy
+		name = jabir_ibn_hayyan.0001.a
+		custom_tooltip = jabir_ibn_hayyan.0001.a.tooltip
+		add_character_modifier = {
+			modifier = wam_studying_jabiran_corpus_alchemy
+			years = 10
 		}
 	}
 
-	option = { # Ok
-		name = jabir_ibn_hayyan.0002.a
+	option = { # Diplomacy
+		name = jabir_ibn_hayyan.0001.b
+		custom_tooltip = jabir_ibn_hayyan.0001.b.tooltip
+		add_character_modifier = {
+			modifier = wam_studying_jabiran_corpus_philosophy
+			years = 10
+		}
+	}
+
+	option = { # Martial
+		name = jabir_ibn_hayyan.0001.c
+		custom_tooltip = jabir_ibn_hayyan.0001.c.tooltip
+		add_character_modifier = {
+			modifier = wam_studying_jabiran_corpus_strategems
+			years = 10
+		}
+	}
+
+	option = { # Stewardship
+		name = jabir_ibn_hayyan.0001.d
+		custom_tooltip = jabir_ibn_hayyan.0001.d.tooltip
+		add_character_modifier = {
+			modifier = wam_studying_jabiran_corpus_astronomy
+			years = 10
+		}
+	}
+
+	option = { # Intrigue
+		name = jabir_ibn_hayyan.0001.e
+		custom_tooltip = jabir_ibn_hayyan.0001.e.tooltip
+		add_character_modifier = {
+			modifier = wam_studying_jabiran_corpus_magic
+			years = 10
+		}
+	}
+
+	option = { # Learning
+		name = jabir_ibn_hayyan.0001.f
+		custom_tooltip = jabir_ibn_hayyan.0001.f.tooltip
+		add_character_modifier = {
+			modifier = wam_studying_jabiran_corpus_religion
+			years = 10
+		}
 	}
 }
