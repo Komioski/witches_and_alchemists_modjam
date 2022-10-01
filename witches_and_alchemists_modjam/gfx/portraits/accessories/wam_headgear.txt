@@ -6,10 +6,16 @@ female_headgear_fantasy_wam_enchanter_hat_01 = {
 	set_tags = "no_hair,hood_beard"
 	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_fantasy_wam_enchanter_hat_01_entity 	 }
 }
+
 male_headgear_fantasy_wam_wizzard_hat_01 = {
 	set_tags = "cap"
 	entity = { required_tags = ""			shared_pose_entity = head		entity = male_headgear_fantasy_wam_wizzard_hat_01_entity 	 }
 }
+female_headgear_fantasy_wam_witch_hat_01 = {
+	set_tags = "cap"
+	entity = { required_tags = ""			shared_pose_entity = head		entity = female_headgear_fantasy_wam_witch_hat_01_entity 	 }
+}
+
 female_headgear_fantasy_wam_witch_headscarf_01 = {	
 	set_tags = "hood"
 	entity = { required_tags = "mask"		shared_pose_entity = head	 }

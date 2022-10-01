@@ -1036,13 +1036,23 @@ special_genes = {
 				}
 			}
 			
-			wam_placeholder_category_cloaks = {
+			wam_evil_cloaks = {
 				index = 6
 				male = {
 					1 = male_cloak_fantasy_wam_wizzard_cloak_01
 				}
 				female = {
 					1 = female_cloak_fantasy_wam_wizzard_cloak_01
+				}
+			}
+			
+			wam_light_cloaks = {
+				index = 7
+				male = {
+					1 = male_cloak_fantasy_wam_wizzard_cloak_02
+				}
+				female = {
+					1 = female_cloak_fantasy_wam_wizzard_cloak_02
 				}
 			}
 

@@ -1662,22 +1662,30 @@ special_genes = {
 				girl = female
 
 				}
-				
-				
-			wam_placeholder_category_clothes = {
+			
+			wam_evil_clothes = {
 				index = 81
-
 				male = {
 					1 = male_clothes_fantasy_wam_wizzard_robe_01
 				}
-
 				female = {
 					1 = female_clothes_fantasy_wam_wizzard_robe_01
 				}
 				boy = male
 				girl = female
-
+			}
+			
+			wam_light_clothes = {
+				index = 82
+				male = {
+					1 = male_clothes_fantasy_wam_wizzard_robe_02
 				}
+				female = {
+					1 = female_clothes_fantasy_wam_wizzard_robe_02
+				}
+				boy = male
+				girl = female
+			}
 				
 		}	
 	}

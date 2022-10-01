@@ -11,7 +11,12 @@
 
 	add_accessory_modifiers = {
 		gene = headgear
-		template = wam_placeholder_category
+		template = wam_evil_headgears
+	}
+	
+	add_accessory_modifiers = {
+		gene = headgear
+		template = wam_light_headgears
 	}
 	
 	### FP2 ###

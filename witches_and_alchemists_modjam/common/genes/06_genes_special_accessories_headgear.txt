@@ -1607,14 +1607,25 @@ accessory_genes = {
 			female = male
 		}
 		
-		wam_placeholder_category = {
+		wam_evil_headgears = {
 			index = 103
 			male = {
 				1 = male_headgear_fantasy_wam_enchanter_hat_01
-				1 = male_headgear_fantasy_wam_wizzard_hat_01
 			}
 			female = {
 				1 = female_headgear_fantasy_wam_enchanter_hat_01
+				1 = female_headgear_fantasy_wam_witch_hat_01
+			}
+			boy = male
+			girl = female
+		}
+		
+		wam_light_headgears = {
+			index = 104
+			male = {
+				1 = male_headgear_fantasy_wam_wizzard_hat_01
+			}
+			female = {
 				1 = female_headgear_fantasy_wam_witch_headscarf_01
 			}
 			boy = male

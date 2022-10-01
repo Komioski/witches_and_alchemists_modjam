@@ -6,7 +6,12 @@
 
 	add_accessory_modifiers = {
 		gene = clothes
-		template = wam_placeholder_category_clothes
+		template = wam_evil_clothes
+	}
+	
+	add_accessory_modifiers = {
+		gene = clothes
+		template = wam_light_clothes
 	}
 	
 ## FP2 - The Fate of Iberia ##

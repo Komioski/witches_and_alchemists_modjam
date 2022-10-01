@@ -7,10 +7,19 @@
 		template = no_cloak
 	}
 
+	## WITCHES AND ALCHEMISTS
+
 	add_accessory_modifiers = {
 		gene = cloaks
-		template = wam_placeholder_category_cloaks
+		template = wam_evil_cloaks
 	}
+	
+	add_accessory_modifiers = {
+		gene = cloaks
+		template = wam_light_cloaks
+	}
+	
+	##
 
 	add_accessory_modifiers = {
 		gene = cloaks

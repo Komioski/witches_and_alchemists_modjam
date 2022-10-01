@@ -3,14 +3,21 @@
  PORTRAIT_MODIFIER_custom_cloaks_male_cloak_fantasy_wam_wizzard_cloak_01:0 "@wam_icon! Wizzard Cloak"
  PORTRAIT_MODIFIER_custom_cloaks_female_cloak_fantasy_wam_wizzard_cloak_01:0 "@wam_icon! Witch Cloak"
  
+ PORTRAIT_MODIFIER_custom_cloaks_male_cloak_fantasy_wam_wizzard_cloak_02:0 "@wam_icon! Alchemist Cloak"
+ PORTRAIT_MODIFIER_custom_cloaks_female_cloak_fantasy_wam_wizzard_cloak_02:0 "@wam_icon! Druidess Cloak"
+ 
  PORTRAIT_MODIFIER_custom_clothes_male_clothes_fantasy_wam_wizzard_robe_01:0 "@wam_icon! Wizzard Robe"
  PORTRAIT_MODIFIER_custom_clothes_female_clothes_fantasy_wam_wizzard_robe_01:0 "@wam_icon! Witch Dress"
  
- PORTRAIT_MODIFIER_custom_headgear_male_headgear_fantasy_wam_wizzard_hat_01:0 "@wam_icon! Wizzard Hat"
- PORTRAIT_MODIFIER_custom_headgear_female_headgear_fantasy_wam_witch_headscarf_01:0 "@wam_icon! Witch Headscarf"
+ PORTRAIT_MODIFIER_custom_clothes_male_clothes_fantasy_wam_wizzard_robe_02:0 "@wam_icon! Alchemist Robe"
+ PORTRAIT_MODIFIER_custom_clothes_female_clothes_fantasy_wam_wizzard_robe_02:0 "@wam_icon! Druidess Dress"
  
- PORTRAIT_MODIFIER_custom_headgear_male_headgear_fantasy_wam_enchanter_hat_01:0 "@wam_icon! Enchanter Hat"
- PORTRAIT_MODIFIER_custom_headgear_female_headgear_fantasy_wam_enchanter_hat_01:0 "@wam_icon! Enchantress Hat"
+ PORTRAIT_MODIFIER_custom_headgear_male_headgear_fantasy_wam_wizzard_hat_01:0 "@wam_icon! Alchemist Pointy Hat"
+ PORTRAIT_MODIFIER_custom_headgear_female_headgear_fantasy_wam_witch_hat_01:0 "@wam_icon! Witch Pointy Hat"
+ PORTRAIT_MODIFIER_custom_headgear_female_headgear_fantasy_wam_witch_headscarf_01:0 "@wam_icon! Druidess Headscarf"
+ 
+ PORTRAIT_MODIFIER_custom_headgear_male_headgear_fantasy_wam_enchanter_hat_01:0 "@wam_icon! Horned Hat"
+ PORTRAIT_MODIFIER_custom_headgear_female_headgear_fantasy_wam_enchanter_hat_01:0 "$PORTRAIT_MODIFIER_custom_headgear_male_headgear_fantasy_wam_enchanter_hat_01$"
  
  wam_poses_list_name:0 "Witches and Alchemists"
  wam_potion_name:0 "Potion"
