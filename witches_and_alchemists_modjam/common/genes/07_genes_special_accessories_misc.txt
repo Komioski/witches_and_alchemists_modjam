@@ -1042,7 +1042,7 @@ special_genes = {
 					1 = male_cloak_fantasy_wam_wizzard_cloak_01
 				}
 				female = {
-					1 = empty
+					1 = female_cloak_fantasy_wam_wizzard_cloak_01
 				}
 			}
 

@@ -1614,7 +1614,8 @@ accessory_genes = {
 				1 = male_headgear_fantasy_wam_wizzard_hat_01
 			}
 			female = {
-				1 = no_headgear
+				1 = female_headgear_fantasy_wam_enchanter_hat_01
+				1 = female_headgear_fantasy_wam_witch_headscarf_01
 			}
 			boy = male
 			girl = female
