@@ -1,0 +1,26 @@
+﻿
+wam_middle_east_01 = {
+	name = "Jabir"
+	religion = "ismaili"
+	culture = "persian"
+	learning = 12
+	trait = education_learning_4
+	trait = intellect_good_2
+	trait = scholar
+	trait = calm
+	trait = diligent
+	trait = content
+	842.8.8 = {
+		birth = yes
+	}
+	867.1.1 = {
+		effect = {
+			add_character_modifier = {
+				modifier = wam_jabir_ibn_hayyan_modifier
+			}
+		}
+	}
+	888.8.8 = {
+		death = yes
+	}
+}
