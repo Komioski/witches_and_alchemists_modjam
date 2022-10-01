@@ -114,3 +114,39 @@
 # 	health = 0.3
 # 	negate_health_penalty_add = 0.1
 # }
+
+wam_studying_jabiran_corpus_alchemy = {
+	icon = fertility_positive
+	health = 0.1
+	negate_health_penalty_add = 0.05
+}
+
+wam_studying_jabiran_corpus_philosophy = {
+	icon = social_positive
+	diplomacy = 2
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.05
+}
+
+wam_studying_jabiran_corpus_strategems = {
+	icon = martial_positive
+	martial = 2
+	monthly_martial_lifestyle_xp_gain_mult = 0.05
+}
+
+wam_studying_jabiran_corpus_astronomy = {
+	icon = magic_positive
+	stewardship = 2
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.05
+}
+
+wam_studying_jabiran_corpus_magic = {
+	icon = stress_positive
+	intrigue = 2
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.05
+}
+
+wam_studying_jabiran_corpus_religion = {
+	icon = piety_positive
+	learning = 2
+	monthly_learning_lifestyle_xp_gain_mult = 0.05
+}

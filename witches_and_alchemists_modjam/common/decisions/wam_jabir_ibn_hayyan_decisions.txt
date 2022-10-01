@@ -58,3 +58,63 @@ wam_jabir_ibn_hayyan_self_study_decision = {
 		}
 	}
 }
+
+wam_jabir_ibn_hayyan_other_study_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_ck2_ritual_scroll_wol.dds"
+	ai_check_interval = 24
+	
+	cooldown = { days = 1825 } # 5 years
+
+	desc = wam_jabir_ibn_hayyan_other_study_decision_desc
+	selection_tooltip = wam_jabir_ibn_hayyan_other_study_decision_tooltip
+
+	is_shown = {
+		NOT = { has_trait = jabir_ibn_hayyan } 
+		is_landed = yes
+	}
+	
+	#is_valid = {
+	#	has_trait = jabir_ibn_hayyan
+	#}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		custom_tooltip = wam_jabir_ibn_hayyan_other_study_decision_effect_tooltip
+		trigger_event = jabir_ibn_hayyan.0002
+	}
+
+	cost = {
+		gold = medium_gold_value
+		prestige = minor_prestige_value
+		piety = minor_piety_value
+	}
+	
+	ai_potential = {
+		short_term_gold > medium_gold_value
+		prestige > minor_prestige_value
+		piety > minor_piety_value
+	}
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = -8
+			has_trait = lazy
+		}
+		modifier = {
+			add = 8
+			has_trait = diligent
+		}
+		modifier = {
+			add = -8
+			has_trait = content
+		}
+		modifier = {
+			add = 8
+			has_trait = ambitious
+		}
+	}
+}

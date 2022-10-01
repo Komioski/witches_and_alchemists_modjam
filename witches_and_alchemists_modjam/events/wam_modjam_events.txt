@@ -136,6 +136,10 @@ wam_modjam_events.0002 = { # Your student keeps failing at some intermediate lev
 		animation = grief
 	}
 
+	trigger = {
+		has_character_flag = wam_modjam_1
+	}
+
 	option = {	# You are not a failure. You can do it. Dedicate yourself. Do or do not, there are no tries anymore.
 		name = wam_modjam_events.0002.a
 		custom_tooltip = wam_modjam_events.0002.a_tt
@@ -157,24 +161,27 @@ wam_modjam_events.0002 = { # Your student keeps failing at some intermediate lev
 		custom_tooltip = wam_modjam_events.0002.b_tt
 		random_list = {
 			50 = {
-				add_trait = cynical
 				scope:interested_friend = {
 					OR = {
 						has_trait = patient
 						has_trait = diligent
 					}
 				}
+				add_trait = cynical
 			}
 			20 = {
 				modifier = {  
-					add = 30
+					add = 70
 					scope:interested_friend = {
 						OR = {
 							has_trait = patient
 							has_trait = diligent
 						}
 					}
-				}	
+				}
+				stress_impact = {
+					cynical = medium_stress_impact_loss
+				}
 			}
 		}
 	}
@@ -195,7 +202,13 @@ wam_modjam_events.0003 = { # An old man comes to you in secret with a.. shameful
 
 	left_portrait = {
 		character = root
-		animation = personality_rational
+		animation = wam_potion
+		triggered_animation = {
+			trigger = {
+				has_trait = sorcerer #TODO
+			}
+			animation = paranoia
+		}
 	}
 
 	right_portrait = {
@@ -216,8 +229,8 @@ wam_modjam_events.0003 = { # An old man comes to you in secret with a.. shameful
 			is_in_an_activity = no
 		}
 		OR = {
-			has_trait = sorcerer
-			has_trait = alchemist
+			has_trait = sorcerer #TODO
+			has_trait = alchemist #TODO
 		}
 		NOT = {
 			has_character_flag = wam_modjam_2
@@ -322,6 +335,508 @@ wam_modjam_events.0003 = { # An old man comes to you in secret with a.. shameful
 	}
 }
 
+##########################################
+# A curious offer
+##########################################
 
+wam_modjam_events.0004 = { # A strange merchant comes to you selling infusions of, according to his words, an otherworldly nature...
+	type = character_event
+	title = wam_modjam_events.0004.t
+	desc = wam_modjam_events.0004.desc
+	theme = realm
+	override_background = {
+		event_background = throne_room
+	}
 
+	left_portrait = {
+		character = root
+		animation = dismissal
+	}
+
+	right_portrait = {
+		character = scope:fertility_problem_guy
+		animation = wam_potion
+	}
+
+	trigger = { 
+		is_at_war = no
+		is_imprisoned = no
+		is_incapable = no
+		is_in_an_activity = no
+		scope:fertility_problem_guy = {
+			is_at_war = no
+			is_imprisoned = no
+			is_incapable = no
+			is_in_an_activity = no
+		}
+		NOT = {
+			has_trait = alchemist #TODO
+		}
+		NOT = {
+			has_character_flag = lootbox_ck3
+		}
+		scope:fertility_problem_guy.primary_spouse = {
+			NOR = {
+				has_trait = celibate
+				can_have_children = no
+				is_incapable = no
+			}
+		}
+	}
+
+	immediate = {	
+		add_character_flag = lootbox_ck3
+		create_character = {
+			save_scope_as = lootbox_merchant
+			name = Karl
+			age = { 40 80 }
+			gender = male
+			gender_female_chance = 0
+			trait = alchemist
+			random_traits = no
+			location = root.location
+			faith = root.faith
+			culture = root.culture
+			dynasty = none
+			learning = 20
+		}
+	}
+
+	option = {	# I would not drink strange infusions. This is madness.
+		name = wam_modjam_events.0004.a
+		custom_tooltip = wam_modjam_events.0004.a_tt
+		stress_impact = {
+			craven = medium_stress_impact_loss
+			paranoid = medium_stress_impact_gain
+		}
+	}
+
+	option = {	# My curiosity compels me...
+		name = wam_modjam_events.0004.b
+		custom_tooltip = wam_modjam_events.0004.b_tt
+		trigger = {
+			gold > 50
+		}
+		pay_short_term_gold = {
+			target = scope:lootbox_merchant
+			gold = 50 
+		}
+		hidden_effect = {
+			random_list = {
+				10 = {
+					add_trait = eunuch
+				}
+				10 = {
+					change_trait_rank = {
+						rank = {
+							trait = physique_good
+							rank = 1 
+							max = 3
+						}
+					}
+				}
+				10 = {
+					change_trait_rank = {
+						rank = {
+							trait = beauty_good
+							rank = 1
+							max = 3
+						}
+					}
+				}
+				10 = {
+					change_trait_rank = {
+						rank = {
+							trait = beauty_bad
+							rank = 1 
+							max = 3
+						}
+					}
+				}
+				10 = {
+					change_trait_rank = {
+						rank = {
+							trait = physique_bad
+							rank = 1 
+							max = 3
+						}
+					}
+				}
+				10 = {
+					add_trait = lunatic
+				}
+				10 = {
+					add_trait = whole_of_body
+				}
+				10 = {
+					add_trait = weak
+				}
+				10 = {
+					add_trait = dull
+				}
+				10 = {
+					add_trait = seducer
+				}
+				10 = {
+					add_trait = wrathful
+				}
+				10 = {
+					add_trait = brave
+				}
+			}
+		}
+	}
+}
+
+##########################################
+# Erratic wand
+##########################################
+
+wam_modjam_events.0005 = { # Your wife seems to note your wand is acting more erratic by the day. It seems to be malfunctioning.
+	type = character_event
+	title = wam_modjam_events.0005
+	desc = wam_modjam_events.0005.desc
+	theme = realm
+	override_background = {
+		event_background = wam_coven_court
+	}
+
+	left_portrait = {
+		character = root
+		animation = disbelief
+	}
+
+	right_portrait = {
+		character = root.primary_spouse
+		animation = fear
+	}
+
+	trigger = { 
+		is_at_war = no
+		is_imprisoned = no
+		is_incapable = no
+		is_in_an_activity = no
+		has_trait = sorcerer #TODO
+		NOT = {
+			has_character_flag = wam_modjam_4
+		}
+	}
+
+	immediate = {	
+		add_character_flag = wam_modjam_4
+	}
+
+	option = {	# Nonsense!
+		name = wam_modjam_events.0005.a
+		custom_tooltip = wam_modjam_events.0005.a_tt
+		stress_impact = {
+			prideful = medium_stress_impact_loss
+		}
+		trigger_event = {
+			id = wam_modjam_events.0006
+			days = 2
+		}
+	}
+
+	option = {	# I should probably discard it...
+		name = wam_modjam_events.0005.b
+		custom_tooltip = wam_modjam_events.0005.b_tt
+		stress_impact = {
+			prideful = medium_stress_impact_gain
+		}
+	}
+}
+
+##########################################
+# Erratic wand - disaster
+##########################################
+
+wam_modjam_events.0006 = { # I will show her, the wand is perfectly fine!!
+	type = character_event
+	title = wam_modjam_events.0006.t
+	desc = wam_modjam_events.0006.desc
+	theme = realm
+	override_background = {     
+      event_background = wam_coven_court
+	}
+
+	left_portrait = {
+		character = root
+		animation = rage
+	}
+
+	right_portrait = {
+		character = root.primary_spouse
+		animation = fear
+	}
+
+	trigger = { 
+		is_at_war = no
+		is_imprisoned = no
+		is_incapable = no
+		is_in_an_activity = no
+		has_trait = sorcerer #TODO
+	}
+
+	option = {	# It sure seems unstable though...
+		name = wam_modjam_events.0006.a
+		custom_tooltip = wam_modjam_events.0006.a_tt
+		random_list = {
+			50 = {
+				trigger_event = wam_modjam_events.0007
+			}
+			50 = {
+				trigger_event = wam_modjam_events.0008
+			}
+		}
+	}
+}
+
+##########################################
+# Erratic wand - disaster
+##########################################
+
+wam_modjam_events.0007 = { # The wand seems to have misfired, turning my wife into dust after a few seconds.
+	type = character_event
+	title = wam_modjam_events.0007.t
+	desc = wam_modjam_events.0007.desc
+	theme = realm
+	override_background = {     
+      event_background = wam_coven_court
+	}
+
+	left_portrait = {
+		character = root
+		animation = rage
+	}
+
+	right_portrait = {
+		character = root.primary_spouse
+		animation = fear
+	}
+
+	trigger = { 
+		is_at_war = no
+		is_imprisoned = no
+		is_incapable = no
+		is_in_an_activity = no
+		has_trait = sorcerer #TODO
+	}
+
+	immediate = {
+		root.primary_spouse = {
+			death = { 
+				killer = root
+				death_reason = death_zapped_into_dust
+			}
+		}
+	}
+
+	option = {	# What a tragedy, my sweet love...
+		name = wam_modjam_events.0007.a
+		custom_tooltip = wam_modjam_events.0007.a_tt
+		add_trait = depressed
+		stress_impact = {
+			kind = massive_stress_impact_gain
+			forgiving = massive_stress_impact_gain
+		}
+	}
+
+	option = {	# I didn't even like her anyway...
+		name = wam_modjam_events.0007.a
+		custom_tooltip = wam_modjam_events.0007.a_tt
+		trigger = {
+			OR = {
+				has_trait = callous
+				has_trait = sadistic
+			}
+		}
+	}
+}
+
+##########################################
+# Erratic wand - disaster
+##########################################
+
+wam_modjam_events.0008 = { # The wand seems to have misfired, turning my wife's beautiful hair white.
+	type = character_event
+	title = wam_modjam_events.0008.t
+	desc = wam_modjam_events.0008.desc
+	theme = realm
+	override_background = {     
+      event_background = wam_coven_court
+	}
+
+	left_portrait = {
+		character = root
+		animation = rage
+	}
+
+	right_portrait = {
+		character = root.primary_spouse
+		animation = fear
+	}
+
+	trigger = { 
+		is_at_war = no
+		is_imprisoned = no
+		is_incapable = no
+		is_in_an_activity = no
+		has_trait = sorcerer #TODO
+	}
+
+	immediate = {
+		root.primary_spouse = {
+			add_trait = albino
+		}
+	}
+
+	option = {	# Well.. it could have been worse...
+		name = wam_modjam_events.0008.a
+		custom_tooltip = wam_modjam_events.0008.a_tt
+	}
+}
+
+##########################################
+# Behind Closed Doors
+##########################################
+
+wam_modjam_events.0009 = { # Your zealous wife has finally found proof of your sorcerous ways...
+	type = character_event
+	title = wam_modjam_events.0009.t
+	desc = wam_modjam_events.0009.desc
+	theme = realm
+	override_background = {     
+      event_background = wam_coven_court
+	}
+
+	left_portrait = {
+		character = root
+		animation = paranoia
+	}
+
+	right_portrait = {
+		character = root.primary_spouse
+		animation = scheme
+	}
+
+	option = {	# But my love, you would sorely miss me in the cold, cold nights...
+		name = wam_modjam_events.0009.a
+		custom_tooltip = wam_modjam_events.0009.a_tt
+		trigger = {
+			has_relation_lover = root.primary_spouse
+		}
+		random_list = {
+			50 = {
+				modifier = {  
+					add = 150
+					OR = {
+						has_trait = seducer
+						has_relation_lover = root.primary_spouse
+						has_relation_soulmate = root.primary_spouse
+						has_trait = beauty_good_1
+						has_trait = beauty_good_2
+						has_trait = beauty_good_3
+					}
+				}	
+				root.primary_spouse = {
+					make_pregnant = {
+						father = root
+						number_of_children = 1
+						known_bastard = no
+					}
+				}
+			}
+			20 = {
+				modifier = {  
+					add = 50
+					NOR = {
+						has_trait = seducer
+						has_relation_lover = root.primary_spouse
+						has_relation_soulmate = root.primary_spouse
+						has_trait = beauty_good_1
+						has_trait = beauty_good_2
+						has_trait = beauty_good_3
+					}
+					OR = {
+						has_trait = beauty_bad_1
+						has_trait = beauty_bad_2
+						has_trait = beauty_bad_3
+					}
+				}	
+				death = {
+					death = { 
+						killer = root.primary_spouse
+						death_reason = murdered
+					}
+				}
+			}
+		}
+	}
+
+	option = {	# I didn't even like you bitch!
+		name = wam_modjam_events.0009.b
+		custom_tooltip = wam_modjam_events.0009.b_tt
+		random_list = {
+			50 = {
+				death = {
+					death = { 
+						killer = root.primary_spouse
+						death_reason = murdered
+					}
+				}
+			}
+			50 = {
+				root.primary_spouse = {
+					death = { 
+						killer = root
+						death_reason = death_turned_into_tobacco
+					}
+				}
+				trigger_event = wam_modjam_events.0008
+			}
+		}
+	}
+
+	option = {	# You won't catch me!
+		name = wam_modjam_events.0009.c
+		custom_tooltip = wam_modjam_events.0009.c_tt
+		random_list = {
+			50 = {
+				divorce = root.primary_spouse
+			}
+			50 = {
+				death = { 
+					killer = root.primary_spouse
+					death_reason = murdered
+				}
+			}
+		}
+	}
+}
+
+##########################################
+# Behind Closed Doors - RIP BOZO
+##########################################
+
+wam_modjam_events.0010 = { # I guess I'm going to roll her ashes into this sheet of scroll... I heard in the Levant, some monks breathe in the air like this...
+	type = character_event
+	title = wam_modjam_events.0010.t
+	desc = wam_modjam_events.0010.desc
+	theme = realm
+	override_background = {     
+      event_background = wam_coven_court
+	}
+
+	left_portrait = {
+		character = root
+		animation = ecstasy
+	}
+
+	option = {	# Rest in peace, clown woman...
+		name = wam_modjam_events.0010.a
+		custom_tooltip = wam_modjam_events.0010.a_tt
+		add_stress = -900
+	}
+}
 
