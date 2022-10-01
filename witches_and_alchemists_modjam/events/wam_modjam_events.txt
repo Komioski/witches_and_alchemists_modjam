@@ -1,0 +1,327 @@
+##########################################
+# A friend takes interest
+##########################################
+
+wam_modjam_events.0001 = { # My friend has asked for a word in private. They claim to have noticed my ways of controlling the fruits of the land, and desire to learn and partake in your activities.
+	type = character_event
+	title = wam_modjam_events.0001.t
+	desc = wam_modjam_events.0001.desc
+	theme = realm
+	override_background = {
+		event_background = courtyard 
+	}
+
+	left_portrait = {
+		character = root
+		animation = disapproval
+	}
+
+	right_portrait = {
+		character = scope:interested_friend
+		animation = personality_greedy
+	}
+
+	trigger = { 
+		is_at_war = no
+		is_imprisoned = no
+		is_incapable = no
+		is_in_an_activity = no
+		scope:interested_friend = {
+			is_at_war = no
+			is_imprisoned = no
+			is_incapable = no
+			is_in_an_activity = no
+		}
+		OR = {
+			has_trait = sorcerer
+			has_trait = alchemist
+		}
+		NOT = {
+			has_character_flag = wam_modjam_1
+		}
+	}
+
+	immediate = {	
+		any_courtier = {
+			limit = {
+				has_relation_friend = root
+			}
+			save_scope_as = interested_friend
+		}
+		add_character_flag = wam_modjam_1
+	}
+
+	option = {	# You would never compare to my skills.
+		name = wam_modjam_events.0001.a
+		custom_tooltip = wam_modjam_events.0001.a_tt
+		stress_impact = {
+			prideful = medium_stress_impact_gain
+		}
+		scope:interested_friend = {
+			add_opinion = {
+				modifier = friendly_interaction
+				target = root
+			}
+		}
+		remove_relation_friend = scope:interested_friend 
+		random_list = {
+			50 = {
+				set_relation_rival = scope:interested_friend
+				modifier = {  
+					add = 50
+					scope:interested_friend = {
+						has_trait = prideful
+					}
+				}	
+			}
+			20 = {
+
+				modifier = {  
+					substract = 50
+					has_trait = kind 
+				}	
+			}
+		}
+	}
+
+	option = {	# For sure, my friend!
+		name = wam_modjam_events.0001.b
+		custom_tooltip = wam_modjam_events.0001.b_tt
+		if = {
+			limit = {
+				has_trait = sorcerer #TODO
+			}
+			scope:interested_friend = {
+				add_trait = sorcerer #TODO
+			}
+		}
+		else = {
+			scope:interested_friend = {
+				add_trait = alchemist #TODO
+			}
+		}
+		trigger_event = {
+			id = wam_modjam_events.0002
+			months = 6
+		}
+	}
+}
+
+##########################################
+# A friend takes interest - teaching session
+##########################################
+
+wam_modjam_events.0002 = { # Your student keeps failing at some intermediate level tasks. He seems crestfallen. Some of his work has even caused dangerous accidents...
+	type = character_event
+	title = wam_modjam_events.0002.t
+	desc = wam_modjam_events.0002.desc
+	theme = realm
+	override_background = {     
+      event_background = wam_coven_court
+	}
+
+	left_portrait = {
+		character = root
+		animation = disgust
+		triggered_animation = {
+			trigger = {
+				has_trait = patient
+			}
+			animation = personality_forgiving
+		}
+	}
+
+	right_portrait = {
+		character = scope:interested_friend
+		animation = grief
+	}
+
+	option = {	# You are not a failure. You can do it. Dedicate yourself. Do or do not, there are no tries anymore.
+		name = wam_modjam_events.0002.a
+		custom_tooltip = wam_modjam_events.0002.a_tt
+		trigger = {
+			has_trait = patient
+		}
+		scope:interested_friend = {
+			add_trait = diligent
+		}
+		stress_impact = {
+			kind = medium_stress_impact_loss
+			prideful = medium_stress_impact_gain
+			patient = medium_stress_impact_loss
+		}
+	}
+	
+	option = {	# Well, it may have escaped your notice, but life isn't fair.
+		name = wam_modjam_events.0002.b
+		custom_tooltip = wam_modjam_events.0002.b_tt
+		random_list = {
+			50 = {
+				add_trait = cynical
+				scope:interested_friend = {
+					OR = {
+						has_trait = patient
+						has_trait = diligent
+					}
+				}
+			}
+			20 = {
+				modifier = {  
+					add = 30
+					scope:interested_friend = {
+						OR = {
+							has_trait = patient
+							has_trait = diligent
+						}
+					}
+				}	
+			}
+		}
+	}
+}
+
+##########################################
+# A desperate proposal
+##########################################
+
+wam_modjam_events.0003 = { # An old man comes to you in secret with a.. shameful proposal, in his own words - he and his wife have been trying for a child for the longest time, and yet they fail to consume. He pleads for your help, citing your rumored knowledge in forbidden arts as a reason. 
+	type = character_event
+	title = wam_modjam_events.0003.t
+	desc = wam_modjam_events.0003.desc
+	theme = realm
+	override_background = {
+		event_background = wam_coven_court
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	right_portrait = {
+		character = scope:fertility_problem_guy
+		animation = beg
+	}
+
+	trigger = {
+		is_male = yes
+		is_at_war = no
+		is_imprisoned = no
+		is_incapable = no
+		is_in_an_activity = no
+		scope:fertility_problem_guy = {
+			is_at_war = no
+			is_imprisoned = no
+			is_incapable = no
+			is_in_an_activity = no
+		}
+		OR = {
+			has_trait = sorcerer
+			has_trait = alchemist
+		}
+		NOT = {
+			has_character_flag = wam_modjam_2
+		}
+		scope:fertility_problem_guy.primary_spouse = {
+			NOR = {
+				has_trait = celibate
+				can_have_children = no
+				is_incapable = no
+			}
+		}
+	}
+
+	immediate = {
+		add_character_flag = wam_modjam_2
+		any_courtier = {
+			limit = {
+				fertility < 30
+				can_have_children = yes
+				is_married = yes
+				any_child = {
+					exists = no
+				}
+			}
+			save_scope_as = fertility_problem_guy
+		}
+	}
+
+	option = {	# I might, if you're willing to pay.
+		name = wam_modjam_events.0003.a
+		custom_tooltip = wam_modjam_events.0003.a_tt
+		trigger = {
+			scope:fertility_problem_guy = {
+				short_term_gold > 100
+			}
+		}
+		scope:fertility_problem_guy = {
+			pay_short_term_gold = {
+				target = root
+				gold = 100 
+			}
+		}
+		scope:fertility_problem_guy.primary_spouse = {
+			make_pregnant = {
+				father = scope:fertility_problem_guy
+				number_of_children = 1
+				known_bastard = no
+			}
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_loss
+			generous = minor_stress_impact_gain
+		}
+	}
+
+	option = {	# Hmmm, this might call for more.. earthly solutions...
+		name = wam_modjam_events.0003.b
+		custom_tooltip = wam_modjam_events.0003.b_tt
+		trigger = {
+			scope:fertility_problem_guy.primary_spouse = {
+				NOR = {
+					has_trait = celibate
+					can_have_children = no
+					has_trait = beauty_bad_1
+					has_trait = beauty_bad_2
+					has_trait = beauty_bad_3
+				}
+			}
+			has_trait = seducer
+		}
+		scope:fertility_problem_guy.primary_spouse = {
+			make_pregnant = {
+				father = root
+				number_of_children = 1
+				known_bastard = no
+			}
+			set_pregnancy_assumed_father = scope:fertility_problem_guy
+		}
+		scope:fertility_problem_guy = {
+			stress_impact = {
+				prideful = massive_stress_impact_gain
+			}
+		}
+		stress_impact = {
+			lustful = minor_stress_impact_loss
+		}
+	}
+
+	option = {	# Don't bother with the payment. This one is on the house.
+		name = wam_modjam_events.0003.c
+		custom_tooltip = wam_modjam_events.0003.c_tt
+		scope:fertility_problem_guy.primary_spouse = {
+			make_pregnant = {
+				father = scope:fertility_problem_guy
+				number_of_children = 1
+				known_bastard = no
+			}
+		}
+		stress_impact = {
+			generous = minor_stress_impact_loss
+		}
+	}
+}
+
+
+
+
