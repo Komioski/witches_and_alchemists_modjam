@@ -7,6 +7,13 @@
 		template = no_headgear
 	}
 
+	### WITCHES AND ALCHEMISTS ###
+
+	add_accessory_modifiers = {
+		gene = headgear
+		template = wam_placeholder_category
+	}
+	
 	### FP2 ###
 
 	add_accessory_modifiers = {

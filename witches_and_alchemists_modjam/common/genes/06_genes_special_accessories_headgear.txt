@@ -1,4 +1,4 @@
-﻿
+
 special_genes = {
 
 accessory_genes = {
@@ -1605,6 +1605,18 @@ accessory_genes = {
 			boy = male
 			girl = male
 			female = male
+		}
+		
+		wam_placeholder_category = {
+			index = 103
+			male = {
+				1 = male_headgear_fantasy_wam_wizzard_hat_01
+			}
+			female = {
+				1 = no_headgear
+			}
+			boy = male
+			girl = female
 		}
 	}
 }
