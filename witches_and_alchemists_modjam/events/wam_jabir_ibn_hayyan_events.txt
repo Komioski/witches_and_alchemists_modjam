@@ -17,19 +17,6 @@ jabir_ibn_hayyan.0001 = {
 		animation = personality_rational
 	}
 
-	trigger = {
-		learning >= decent_skill_rating
-	}
-
-	
-	immediate = {
-		create_character = {
-			location = root.capital_province
-			template = jabir_ibn_hayyan_character
-			save_scope_as = jabir
-		}
-	}
-
 	option = { # Ok
 		name = jabir_ibn_hayyan.0001.a
 	}
