@@ -1,0 +1,17 @@
+﻿
+
+# jabir_ibn_hayyan_character = {
+# 	name = "Jabir"
+# 	age = { 20 30 }
+# 	trait = mystic_3
+# 	trait = education_learning_4
+# 	random_traits = yes
+# 	culture = culture:persian
+# 	faith = faith:imami
+# 	gender_female_chance = 0
+# 	learning = max_template_high_skill
+# 	prowess = {
+# 		min_template_high_skill
+# 		max_template_high_skill
+# 	}
+# }

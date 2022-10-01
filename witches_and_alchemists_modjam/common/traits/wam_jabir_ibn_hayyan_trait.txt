@@ -1,0 +1,28 @@
+﻿
+
+jabir_ibn_hayyan = {
+	
+	
+	monthly_lifestyle_xp_gain_mult = 0.05
+	health = 0.3
+	negate_health_penalty_add = 0.1
+
+	immortal = yes
+	
+	shown_in_ruler_designer = no
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_jabir_ibn_hayyan_desc
+			}
+			desc = trait_jabir_ibn_hayyan_character_desc
+		}
+	}
+
+	icon = jabir_ibn_hayyan.dds
+
+}

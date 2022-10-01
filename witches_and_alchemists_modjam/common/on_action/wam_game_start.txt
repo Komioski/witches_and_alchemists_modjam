@@ -1,0 +1,23 @@
+﻿# on_game_start = {
+# 	on_actions = {
+# 		wam_setup_on_actions
+# 	}
+# }
+
+# wam_setup_on_actions = {
+# 	effect = {
+# 		title:c_baghdad.holder = {
+# 			create_character = {
+# 				location = title:c_baghdad.holder.location
+# 				template = pool_repopulate_spouse
+# 				save_temporary_scope_as = jabir
+# 			}
+# 			scope:jabir = {
+# 				add_to_global_variable_list = {
+# 					name = wam_jabir_ibn_hayyan_list # Dunno how else to do this
+# 					target = this
+# 				}
+# 			}
+# 		}
+# 	}
+# }

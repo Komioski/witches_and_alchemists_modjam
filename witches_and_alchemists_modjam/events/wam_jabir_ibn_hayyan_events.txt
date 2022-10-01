@@ -1,0 +1,77 @@
+﻿##############################################################################################
+# 
+# JABIR IBN HAYYAN EVENTS
+# 
+##############################################################################################
+
+namespace = jabir_ibn_hayyan
+
+jabir_ibn_hayyan.0001 = {
+	type = character_event
+	title = jabir_ibn_hayyan.0001.t
+	desc = jabir_ibn_hayyan.0001.desc
+	theme = learning_scholarship_focus
+	
+	right_portrait = { 	
+		character = root
+		animation = personality_rational
+	}
+
+	trigger = {
+		learning >= decent_skill_rating
+	}
+
+	
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			template = jabir_ibn_hayyan_character
+			save_scope_as = jabir
+		}
+	}
+
+	option = { # Ok
+		name = jabir_ibn_hayyan.0001.a
+	}
+}
+
+jabir_ibn_hayyan.0002 = {
+	type = character_event
+	title = jabir_ibn_hayyan.0002.t
+	desc = jabir_ibn_hayyan.0002.desc
+	theme = realm
+	override_icon = { reference = "gfx/interface/icons/event_types/type_learning.dds" } 
+	
+	left_portrait = { 	
+		character = root
+		animation = personality_cynical
+	}
+	right_portrait = { 	
+		character = scope:jabir
+		animation = personality_content
+	}
+
+	trigger = {
+		learning >= decent_skill_rating
+	}
+
+	
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			template = jabir_ibn_hayyan_character
+			save_scope_as = jabir
+		}
+		hidden_effect = {
+			scope:jabir = {
+				add_character_modifier = {
+					modifier = wam_jabir_ibn_hayyan_modifier
+				}
+			}
+		}
+	}
+
+	option = { # Ok
+		name = jabir_ibn_hayyan.0002.a
+	}
+}

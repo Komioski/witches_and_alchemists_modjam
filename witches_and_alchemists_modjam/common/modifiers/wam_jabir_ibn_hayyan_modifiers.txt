@@ -108,9 +108,9 @@
 
 
 
-wam_jabir_ibn_hayyan_modifier = {
-	icon = magic_positive
-	life_expectancy = 50
-	health = 0.3
-	negate_health_penalty_add = 0.1
-}
+# wam_jabir_ibn_hayyan_modifier = {
+# 	icon = magic_positive
+# 	life_expectancy = 50
+# 	health = 0.3
+# 	negate_health_penalty_add = 0.1
+# }
