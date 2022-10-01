@@ -1,0 +1,16 @@
+﻿new_poses_on_action = {
+	on_actions = {
+		cfp
+	}
+}
+
+cfp = {
+	effect = {
+		if = {
+			limit = { exists = global_var:FSB_is_loaded }
+			wam_add_pose_to_list = { list = wam pose = wam_cauldron }
+			wam_add_pose_to_list = { list = wam pose = wam_potion }
+			wam_add_pose_to_list = { list = wam pose = wam_grenade }
+		}
+	}
+}
