@@ -42,7 +42,7 @@ wam_modjam_events.0001 = { # My friend has asked for a word in private. They cla
 	}
 
 	immediate = {	
-		any_courtier = {
+		random_courtier = {
 			limit = {
 				has_relation_friend = root
 			}
@@ -246,7 +246,7 @@ wam_modjam_events.0003 = { # An old man comes to you in secret with a.. shameful
 
 	immediate = {
 		add_character_flag = wam_modjam_2
-		any_courtier = {
+		random_courtier = {
 			limit = {
 				fertility < 30
 				can_have_children = yes
