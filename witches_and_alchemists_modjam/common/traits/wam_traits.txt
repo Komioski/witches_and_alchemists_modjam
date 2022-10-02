@@ -1,6 +1,7 @@
 ﻿
 
-jabir_ibn_hayyan = {	
+jabir_ibn_hayyan = {
+	
 	
 	monthly_lifestyle_xp_gain_mult = 0.05
 	health = 0.3
@@ -23,5 +24,21 @@ jabir_ibn_hayyan = {
 	}
 
 	icon = jabir_ibn_hayyan.dds
+
+}
+
+druid = {
+	#Druids are wise
+	learning = 2
+	#Druids are well regarded
+	courtier_and_guest_opinion = 10
+	#TODO: Enables journey to sacred grove
+	
+	
+	shown_in_ruler_designer = no
+
+	desc = trait_druid_desc
+
+	icon = druid.dds
 
 }

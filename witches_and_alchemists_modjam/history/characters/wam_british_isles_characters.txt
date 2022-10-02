@@ -1,0 +1,22 @@
+﻿
+wam_british_isles_01 = {
+	name = "Taliesin"
+	religion = "pagan"
+	culture = "welsh"
+	learning = 8
+	
+	trait = shrewd
+	trait = calm
+	trait = compassionate
+	trait = druid
+	trait = education_learning_3
+	trait = patient
+	trait = reclusive
+	
+	806.4.18 = {
+		birth = yes
+	}
+	880.7.21 = {
+		death = yes
+	}
+}

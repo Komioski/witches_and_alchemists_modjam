@@ -1,0 +1,13 @@
+k_ynys_dywyll = {
+	844.1.1 = {
+		holder = wam_british_isles_01 #Druid King
+	}
+	
+	851.1.1 = { change_development_level = 2 }
+}
+
+
+
+
+
+
