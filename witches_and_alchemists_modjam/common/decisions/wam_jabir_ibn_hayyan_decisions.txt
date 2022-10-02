@@ -22,18 +22,18 @@ wam_jabir_ibn_hayyan_self_study_decision = {
 	}
 
 	effect = {
-		custom_tooltip = wam_jabir_ibn_hayyan_self_study_decision_effect_tooltip
+		custom_tooltip = wam_jabir_ibn_hayyan_self_study_decision_effect_tooltip_1
 		trigger_event = jabir_ibn_hayyan.0001
 	}
 
 	cost = {
-		gold = medium_gold_value
+		gold = minor_gold_value
 		prestige = minor_prestige_value
 		piety = minor_piety_value
 	}
 	
 	ai_potential = {
-		short_term_gold > medium_gold_value
+		short_term_gold > minor_gold_value
 		prestige > minor_prestige_value
 		piety > minor_piety_value
 	}
@@ -82,18 +82,19 @@ wam_jabir_ibn_hayyan_other_study_decision = {
 	}
 
 	effect = {
-		custom_tooltip = wam_jabir_ibn_hayyan_other_study_decision_effect_tooltip
+		custom_tooltip = wam_jabir_ibn_hayyan_other_study_decision_effect_tooltip_1
+		custom_tooltip = wam_jabir_ibn_hayyan_other_study_decision_effect_tooltip_2
 		trigger_event = jabir_ibn_hayyan.0002
 	}
 
 	cost = {
-		gold = medium_gold_value
+		gold = minor_gold_value
 		prestige = minor_prestige_value
 		piety = minor_piety_value
 	}
 	
 	ai_potential = {
-		short_term_gold > medium_gold_value
+		short_term_gold > minor_gold_value
 		prestige > minor_prestige_value
 		piety > minor_piety_value
 	}
