@@ -32,10 +32,10 @@ wam_modjam_events.0001 = { # My friend has asked for a word in private. They cla
 			is_incapable = no
 			is_in_an_activity = no
 		}
-		OR = {
-			has_trait = sorcerer
-			has_trait = alchemist
-		}
+		# OR = {
+		# 	has_trait = sorcerer #TODO
+		# 	has_trait = alchemist #TODO
+		# }
 		NOT = {
 			has_character_flag = wam_modjam_1
 		}
@@ -87,19 +87,19 @@ wam_modjam_events.0001 = { # My friend has asked for a word in private. They cla
 	option = {	# For sure, my friend!
 		name = wam_modjam_events.0001.b
 		custom_tooltip = wam_modjam_events.0001.b_tt
-		if = {
-			limit = {
-				has_trait = sorcerer #TODO
-			}
-			scope:interested_friend = {
-				add_trait = sorcerer #TODO
-			}
-		}
-		else = {
-			scope:interested_friend = {
-				add_trait = alchemist #TODO
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		# has_trait = sorcerer #TODO
+		# 	}
+		# 	scope:interested_friend = {
+		# 		# add_trait = sorcerer #TODO
+		# 	}
+		# }
+		# else = {
+		# 	scope:interested_friend = {
+		# 		add_trait = alchemist #TODO
+		# 	}
+		# }
 		trigger_event = {
 			id = wam_modjam_events.0002
 			months = 6
@@ -203,12 +203,12 @@ wam_modjam_events.0003 = { # An old man comes to you in secret with a.. shameful
 	left_portrait = {
 		character = root
 		animation = wam_potion
-		triggered_animation = {
-			trigger = {
-				has_trait = sorcerer #TODO
-			}
-			animation = paranoia
-		}
+		# triggered_animation = {
+		# 	trigger = {
+		# 		has_trait = sorcerer #TODO
+		# 	}
+		# 	animation = paranoia
+		# }
 	}
 
 	right_portrait = {
@@ -228,10 +228,10 @@ wam_modjam_events.0003 = { # An old man comes to you in secret with a.. shameful
 			is_incapable = no
 			is_in_an_activity = no
 		}
-		OR = {
-			has_trait = sorcerer #TODO
-			has_trait = alchemist #TODO
-		}
+		# OR = {
+		# 	has_trait = sorcerer #TODO
+		# 	has_trait = alchemist #TODO
+		# }
 		NOT = {
 			has_character_flag = wam_modjam_2
 		}
@@ -369,9 +369,9 @@ wam_modjam_events.0004 = { # A strange merchant comes to you selling infusions o
 			is_incapable = no
 			is_in_an_activity = no
 		}
-		NOT = {
-			has_trait = alchemist #TODO
-		}
+		# NOT = {
+		# 	has_trait = alchemist #TODO
+		# }
 		NOT = {
 			has_character_flag = lootbox_ck3
 		}
@@ -392,7 +392,7 @@ wam_modjam_events.0004 = { # A strange merchant comes to you selling infusions o
 			age = { 40 80 }
 			gender = male
 			gender_female_chance = 0
-			trait = alchemist
+			# trait = alchemist
 			random_traits = no
 			location = root.location
 			faith = root.faith
@@ -516,7 +516,7 @@ wam_modjam_events.0005 = { # Your wife seems to note your wand is acting more er
 		is_imprisoned = no
 		is_incapable = no
 		is_in_an_activity = no
-		has_trait = sorcerer #TODO
+		# has_trait = sorcerer #TODO
 		NOT = {
 			has_character_flag = wam_modjam_4
 		}
@@ -575,7 +575,7 @@ wam_modjam_events.0006 = { # I will show her, the wand is perfectly fine!!
 		is_imprisoned = no
 		is_incapable = no
 		is_in_an_activity = no
-		has_trait = sorcerer #TODO
+		# has_trait = sorcerer #TODO
 	}
 
 	option = {	# It sure seems unstable though...
@@ -620,7 +620,7 @@ wam_modjam_events.0007 = { # The wand seems to have misfired, turning my wife in
 		is_imprisoned = no
 		is_incapable = no
 		is_in_an_activity = no
-		has_trait = sorcerer #TODO
+		# has_trait = sorcerer #TODO
 	}
 
 	immediate = {
@@ -682,7 +682,7 @@ wam_modjam_events.0008 = { # The wand seems to have misfired, turning my wife's 
 		is_imprisoned = no
 		is_incapable = no
 		is_in_an_activity = no
-		has_trait = sorcerer #TODO
+		# has_trait = sorcerer #TODO
 	}
 
 	immediate = {
@@ -764,11 +764,9 @@ wam_modjam_events.0009 = { # Your zealous wife has finally found proof of your s
 						has_trait = beauty_bad_3
 					}
 				}	
-				death = {
-					death = { 
+				death = { 
 						killer = root.primary_spouse
-						death_reason = murdered
-					}
+						death_reason = death_murder
 				}
 			}
 		}
@@ -779,19 +777,16 @@ wam_modjam_events.0009 = { # Your zealous wife has finally found proof of your s
 		custom_tooltip = wam_modjam_events.0009.b_tt
 		random_list = {
 			50 = {
-				death = {
-					death = { 
+				death = { 
 						killer = root.primary_spouse
-						death_reason = murdered
+						death_reason = death_murder
 					}
 				}
 			}
 			50 = {
-				root.primary_spouse = {
-					death = { 
-						killer = root
-						death_reason = death_turned_into_tobacco
-					}
+				death = { 
+					killer = root
+					death_reason = death_zapped_into_dust
 				}
 				trigger_event = wam_modjam_events.0008
 			}
@@ -808,7 +803,7 @@ wam_modjam_events.0009 = { # Your zealous wife has finally found proof of your s
 			50 = {
 				death = { 
 					killer = root.primary_spouse
-					death_reason = murdered
+					death_reason = death_murder
 				}
 			}
 		}
