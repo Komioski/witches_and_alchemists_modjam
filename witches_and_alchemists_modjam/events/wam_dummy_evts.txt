@@ -1,0 +1,24 @@
+﻿namespace = wam_dummy
+
+wam_dummy.1 = {
+	type = character_event
+	orphan = yes
+	hidden = yes
+	trigger = {
+		exists = var:wam_selected_treatment
+		var:wam_selected_treatment = flag:boiling
+		var:wam_selected_treatment = flag:grinding
+		var:wam_selected_treatment = flag:dissolving
+		var:wam_selected_treatment = flag:baking
+		var:wam_selected_treatment = flag:philosophers_stone
+		var:wam_selected_treatment = flag:panacea
+		exists = var:outcome_artifact
+	}
+	immediate = {
+		set_variable = { name = wam_selected_treatment value = flag:boiling }
+		set_variable = { name = wam_selected_treatment value = flag:grinding }
+		set_variable = { name = wam_selected_treatment value = flag:baking }
+		set_variable = { name = wam_selected_treatment value = flag:dissolving }
+		set_variable = { name = outcome_artifact value = flag:dissolving }
+	}
+}

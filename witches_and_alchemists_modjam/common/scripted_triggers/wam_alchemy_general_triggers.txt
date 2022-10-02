@@ -1,0 +1,39 @@
+﻿wam_has_ingredient_selected_trigger = {
+	OR = {
+		AND = {
+			exists = var:wam_selected_ingredient_1
+			var:wam_selected_ingredient_1 = flag:$INGREDIENT$
+		}
+		AND = {
+			exists = var:wam_selected_ingredient_2
+			var:wam_selected_ingredient_2 = flag:$INGREDIENT$
+		}
+		AND = {
+			exists = var:wam_selected_ingredient_3
+			var:wam_selected_ingredient_3 = flag:$INGREDIENT$
+		}
+	}
+}
+
+wam_has_treatment_selected_trigger = {
+	exists = var:wam_selected_treatment
+	var:wam_selected_treatment = flag:$TREATMENT$
+}
+
+wam_find_alchemy_story_trigger = {
+	any_owned_story = {
+		story_type = wam_alchemic_knowledge_story
+		save_temporary_scope_as = story
+	}
+}
+
+wam_owns_ingredient_trigger = {
+	wam_find_alchemy_story_trigger = yes
+	scope:story = {
+		var:wam_amount_owned_ingr_$INGREDIENT$ > 0
+	}
+}
+
+wam_realm_has_ingredient_trigger = {
+	wam_realm_has_$INGREDIENT$_trigger = yes
+}

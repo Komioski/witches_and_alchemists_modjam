@@ -1,0 +1,97 @@
+﻿wam_alchemic_knowledge_story = { #Tracks a character's known recipes, available ingredients, etc.
+
+	on_setup = {
+		#Set up variables to track - for each ingredient - whether it's known, the amount currently owned, and the location from which to import it.
+		wam_execute_effect_for_every_ingredient = { EFFECT = wam_setup_ingredient_default_vars_effect }
+
+		#Set up variables to track - for each treatment - whether it's known.
+		wam_execute_effect_for_every_treatment = { EFFECT = wam_setup_treatment_default_vars_effect }
+
+		#Set up variables to track - for each recipe - whether it's known.
+		wam_execute_effect_for_every_recipe = { EFFECT = wam_setup_recipe_default_vars_effect }
+	}
+
+	on_owner_death = { #Script to 
+		if = {
+			limit = {
+				story_owner = {
+					exists = player_heir
+				}
+			}
+			if = {
+				limit = {
+					story_owner.player_heir = {
+						owns_story_of_type = wam_alchemic_knowledge_story
+					}
+				}
+				#TODO: merge alchemy knowledge/ingredients
+			} else = {
+				story_owner.player_heir = {
+					save_temporary_scope_as = new_owner
+				}
+			}
+			if = {
+				limit = {
+					exists = scope:new_owner
+				}
+				make_story_owner = scope:new_owner
+			}
+		} else = {
+			end_story = yes
+		}
+	}
+	
+	effect_group = { #Basic maintenance
+		months = 3
+		triggered_effect = {
+			trigger = {
+				story_owner = { is_ruler = no }
+			}
+			effect = { end_story = yes }
+		}
+
+		triggered_effect = {
+			trigger = {
+				story_owner = {
+					any_owned_story = {
+						story_type = wam_alchemic_knowledge_story
+						count = 2
+					}
+				}
+			}
+			effect = { end_story = yes }
+		}
+	}
+
+	# effect_group = { #Trigger the events
+	# 	years = 1
+
+	# 	triggered_effect = {
+	# 		trigger = { 
+	# 			OR = {
+	# 				exists = var:lang_1
+	# 				exists = var:lang_2
+	# 				exists = var:lang_3
+	# 			}
+	# 		}
+	# 		effect = {
+	# 			story_owner = {
+	# 				if = {
+	# 					limit = { age = 6 }
+	# 					trigger_event = {
+	# 						id = multie.1
+	# 						days = { 0 30 }
+	# 					}
+	# 				}
+	# 				every_courtier = {
+	# 					limit = { age = 6 }
+	# 					trigger_event = {
+	# 						id = multie.1
+	# 						days = { 0 30 }
+	# 					}
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+}

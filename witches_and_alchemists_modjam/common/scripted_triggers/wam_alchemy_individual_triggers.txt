@@ -1,0 +1,57 @@
+﻿### INGREDIENTS ###
+wam_trigger_for_scoped_ingredient = {
+	switch = {
+		trigger = $SCOPED_INGREDIENT$
+		flag:mercury = { $TRIGGER$ = { INGREDIENT = mercury } }
+		flag:realgar = { $TRIGGER$ = { INGREDIENT = realgar } }
+		flag:sulphur = { $TRIGGER$ = { INGREDIENT = sulphur } }
+		flag:lead = { $TRIGGER$ = { INGREDIENT = lead } }
+	}
+}
+
+wam_ingredient_is_ubiquitous_trigger = {
+	OR = {
+		flag:$INGREDIENT$ = flag:lead
+	}
+}
+
+wam_ingredient_is_common_trigger = {
+	OR = {
+		flag:$INGREDIENT$ = flag:realgar
+		flag:$INGREDIENT$ = flag:sulphur
+	}
+}
+wam_ingredient_is_rare_trigger = {
+	OR = {
+		flag:$INGREDIENT$ = flag:mercury
+	}
+}
+
+#These are scoped to a title and can reference terrain type, location, etc.
+wam_realm_has_mercury_trigger = {
+	always = no
+}
+wam_realm_has_lead_trigger = {
+	always = yes
+}
+wam_realm_has_sulphur_trigger = {
+	always = no
+}
+wam_realm_has_realgar_trigger = {
+	always = yes
+}
+
+### RECIPES ###
+wam_has_right_input_for_philosophers_stone_trigger = {
+	wam_has_ingredient_selected_trigger = { INGREDIENT = realgar }
+	wam_has_ingredient_selected_trigger = { INGREDIENT = mercury }
+	wam_has_ingredient_selected_trigger = { INGREDIENT = lead }
+	wam_has_treatment_selected_trigger = { TREATMENT = boiling }
+}
+
+wam_has_right_input_for_panacea_trigger = {
+	wam_has_ingredient_selected_trigger = { INGREDIENT = realgar }
+	wam_has_ingredient_selected_trigger = { INGREDIENT = mercury }
+	wam_has_ingredient_selected_trigger = { INGREDIENT = sulphur }
+	wam_has_treatment_selected_trigger = { TREATMENT = grinding }
+}

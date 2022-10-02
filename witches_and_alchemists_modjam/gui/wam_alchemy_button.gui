@@ -1,0 +1,37 @@
+widget = {
+	name = "wam_alchemy_button"
+	datacontext = "[GetVariableSystem]"
+	#visible = "[IsGameViewOpen('court_window')]"
+	parentanchor = top|right
+	allow_outside = yes
+	layer = top
+	using = Window_Size_MainTab
+
+	state = {
+		name = _show
+		using = Animation_FadeIn_Quick
+		using = Window_Position_MainTab
+	}
+
+	state = {
+		name = _hide
+		using = Animation_FadeOut_Quick
+		using = Window_Position_MainTab_Hide
+	}
+
+	button_standard = {
+		name = "open_wam_alchemy"
+		size = { 40 40 }
+		position = { 50 53 }
+		using = tooltip_nw
+
+		button_icon_highlight = {
+			parentanchor = center
+			size = { 25 25 }
+			texture = "gfx/interface/icons/culture_pillars/language.dds"
+		}
+
+		onclick = "[GetVariableSystem.Set('wam_alchemy_window_open', 'yes')]"
+		tooltip = "wam_alchemy_open_window_btn_tt"
+	}
+}

@@ -1,0 +1,71 @@
+﻿#Effects for individual ingredients/treatments/recipes/outcomes
+#Add to this file to support new ones
+
+### INGREDIENTS ###
+wam_execute_effect_for_every_ingredient = {
+	$EFFECT$ = { INGREDIENT = mercury }
+	$EFFECT$ = { INGREDIENT = realgar }
+	$EFFECT$ = { INGREDIENT = sulphur }
+	$EFFECT$ = { INGREDIENT = lead }
+}
+
+wam_execute_effect_for_scoped_ingredient_effect = {
+	switch = {
+		trigger = $SCOPED_INGREDIENT$
+		flag:mercury = { $EFFECT$ = { INGREDIENT = mercury } }
+		flag:realgar = { $EFFECT$ = { INGREDIENT = realgar } }
+		flag:sulphur = { $EFFECT$ = { INGREDIENT = sulphur } }
+		flag:lead = { $EFFECT$ = { INGREDIENT = lead } }
+	}
+}
+
+### TREATMENTS ###
+wam_execute_effect_for_every_treatment = {
+	$EFFECT$ = { TREATMENT = boiling }
+	$EFFECT$ = { TREATMENT = grinding }
+	$EFFECT$ = { TREATMENT = baking }
+	$EFFECT$ = { TREATMENT = dissolving }
+}
+
+### RECIPES ###
+wam_execute_effect_for_every_recipe = {
+	$EFFECT$ = { RECIPE = philosophers_stone }
+	$EFFECT$ = { RECIPE = panacea }
+}
+
+wam_execute_recipe_philosophers_stone_effect = {
+	wam_remove_ingredient_effect = { INGREDIENT = realgar }
+	wam_remove_ingredient_effect = { INGREDIENT = mercury }
+	wam_remove_ingredient_effect = { INGREDIENT = lead }
+	wam_create_artifact_effect = { ARTIFACT = philosophers_stone }
+}
+
+wam_execute_recipe_panacea_effect = {
+	wam_remove_ingredient_effect = { INGREDIENT = realgar }
+	wam_remove_ingredient_effect = { INGREDIENT = mercury }
+	wam_remove_ingredient_effect = { INGREDIENT = sulphur }
+	wam_create_artifact_effect = { ARTIFACT = panacea }
+}
+
+### OUTCOMES ###
+wam_create_artifact_philosophers_stone_effect = {
+	save_scope_as = owner
+	create_artifact_regalia_effect = {
+		OWNER = scope:owner
+		SMITH = scope:owner
+	}
+	scope:newly_created_artifact = {
+		save_scope_as = artifact
+	}
+}
+
+wam_create_artifact_panacea_effect = {
+	save_scope_as = owner
+	create_artifact_brooch_effect = {
+		OWNER = scope:owner
+		SMITH = scope:owner
+	}
+	scope:newly_created_artifact = {
+		save_scope_as = artifact
+	}
+}

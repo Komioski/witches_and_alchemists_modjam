@@ -1,0 +1,45 @@
+﻿# wam_ingredient_import_tt = {
+# 	type = character
+# 	first
+# 	text = {
+# 		trigger = {
+# 			save_temporary_scope_as = player
+# 			exists = var:wam_selected_detail_view_ingredient_import_location
+# 			var:wam_selected_detail_view_ingredient_import_location = {
+# 				owner = {
+# 					OR = {
+# 						this = scope:player
+# 						any_liege_or_above = {
+# 							this = scope:player
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		localization_key = wam_ingredient_gather_local
+# 	}
+# 	text = {
+# 		trigger = {
+# 			save_temporary_scope_as = player
+# 			exists = var:wam_selected_detail_view_ingredient_import_location
+# 			var:wam_selected_detail_view_ingredient_import_location = {
+# 				owner = {
+# 					OR = {
+# 						any_ally = {
+# 							this = scope:player
+# 						}
+# 						any_liege_or_above = {
+# 							any_ally = {
+# 								this = scope:player
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		localization_key = wam_ingredient_import_ally
+# 	}
+# 	text = {
+# 		localization_key = wam_ingredient_import_non_ally
+# 	}
+# }

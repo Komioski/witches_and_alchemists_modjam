@@ -1,0 +1,19 @@
+﻿#Invisible pseudo-innovations are the only way to dynamically get textures from gui based on scope flag names.
+#Credit to (who else but) Tobbzn for finding out.
+
+wam_ingr_mercury = {
+	group = culture_group_military culture_era = culture_era_tribal potential = { always = no }
+	icon = "gfx/interface/icons/alchemy_ingredients/wam_ingr_mercury.dds"
+}
+wam_ingr_sulphur = {
+	group = culture_group_military culture_era = culture_era_tribal potential = { always = no }
+	icon = "gfx/interface/icons/alchemy_ingredients/wam_ingr_sulphur.dds"
+}
+wam_ingr_lead = {
+	group = culture_group_military culture_era = culture_era_tribal potential = { always = no }
+	icon = "gfx/interface/icons/alchemy_ingredients/wam_ingr_lead.dds"
+}
+wam_ingr_realgar = {
+	group = culture_group_military culture_era = culture_era_tribal potential = { always = no }
+	icon = "gfx/interface/icons/alchemy_ingredients/wam_ingr_realgar.dds"
+}
